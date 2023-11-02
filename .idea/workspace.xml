@@ -1,202 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fddc57a0-31e4-46dd-bd25-35679407dd82" name="Changes" comment="Done">
-      <change afterPath="$PROJECT_DIR$/wechat/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/.metadata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/kotlin/com/example/wechat/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/android/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/images/background-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/images/google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/images/one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/images/welcome_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Animation/loginPageAnimation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Screens/LoginScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Screens/Message/MessageSendingFIeld.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Screens/Message/P2PMessageUI/ReceiverUI.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Screens/Message/P2PMessageUI/senderUI.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Screens/Message/PersonalMessageScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/SplashScreen/AppBarBody/Body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/SplashScreen/SplashToFirstScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/Themes/constants.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/lib/main.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/test/widget_test.dart" afterDir="false" />
-    </list>
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Dart File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2X3zu2DaqwnBcQUgBrQzJFZUBWs" />
+  <component name="ProjectId" id="2Xd2luqa9j5785p8QYkVcRXreGf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "E:/Flutter Android Project/WeChat/wechat",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Flutter Android Project/WeChat/wechat&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Flutter Android Project\WeChat\wechat\lib\Screens\Message\P2PMessageUI" />
-      <recent name="E:\Flutter Android Project\WeChat\wechat\lib\SplashScreen\AppBarBody" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="filePath" value="$PROJECT_DIR$/wechat/lib/main.dart" />
-      <method v="2" />
-    </configuration>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\anike\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fddc57a0-31e4-46dd-bd25-35679407dd82" name="Changes" comment="" />
-      <created>1697872782999</created>
+      <changelist id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="" />
+      <created>1698944790365</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697872782999</updated>
+      <updated>1698944790365</updated>
     </task>
-    <task id="LOCAL-00001" summary="Done">
-      <created>1698944338615</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1698944338615</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Done">
-      <created>1698944380534</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1698944380534</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Done">
-      <created>1698944568857</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1698944568857</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done" />
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+    </layout>
   </component>
 </project>
