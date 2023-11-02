@@ -32,7 +32,7 @@ class SenderMessageUI extends StatelessWidget {
                   child:  Stack(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 5,left: 5),
+                        margin: const EdgeInsets.only(top: 5,left: 5),
                           child: const Text("Heqqwiolo")),
                       Container(
                         margin: const EdgeInsets.only(top: 16,left: 75),
