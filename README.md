@@ -3,7 +3,7 @@ A Simple Chatting Application In Flutter
 
 
 
-## LICENSE
+# LICENSE
 
 MIT License
 
