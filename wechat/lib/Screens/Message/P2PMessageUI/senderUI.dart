@@ -33,7 +33,7 @@ class SenderMessageUI extends StatelessWidget {
                     children: [
                       Container(
                         margin: const EdgeInsets.only(top: 5,left: 5),
-                          child: const Text("Heqqwiolo")),
+                          child: const Text("Hello")),
                       Container(
                         margin: const EdgeInsets.only(top: 16,left: 75),
                         child: const Icon(Icons.done_all_rounded,size:15,),
