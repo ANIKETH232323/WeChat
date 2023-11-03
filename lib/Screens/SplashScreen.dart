@@ -30,20 +30,19 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return   Stack(
       children: [
-        const RiveAnimation.asset(
+        RiveAnimation.asset(
           'images/message_icon.riv',
           fit: BoxFit.cover,
         ),
         Center(
-          child: Container(
-            margin:EdgeInsets.only(top: 380),
+          child: SizedBox(
             child: Material(
-
-              color: Colors.transparent,
-                child: Text("Wechat",
-                style: TextStyle(fontSize: 25,
-                ),
-
+              type: MaterialType.transparency,
+                child: Container(
+                  margin: EdgeInsets.only(top: 350,),
+                  child: Text("WeChat",
+                    style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2),
+                  ),
                 )),
           ),
         )
