@@ -91,6 +91,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   google_fonts:
     dependency: "direct main"
     description:
@@ -99,6 +104,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.0"
+  graphs:
+    dependency: transitive
+    description:
+      name: graphs
+      sha256: aedc5a15e78fc65a6e23bcd927f24c64dd995062bcd1ca6eda65a3cff92a4d19
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.1"
   http:
     dependency: transitive
     description:
@@ -175,10 +188,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_android
-      sha256: "6b8b19bd80da4f11ce91b2d1fb931f3006911477cec227cce23d3253d80df3f1"
+      sha256: e595b98692943b4881b219f0a9e3945118d3c16bd7e2813f98ec6e532d905f72
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.0"
+    version: "2.2.1"
   path_provider_foundation:
     dependency: transitive
     description:
@@ -227,6 +240,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.6"
+  rive:
+    dependency: "direct main"
+    description:
+      name: rive
+      sha256: a8740aedb9f5c341c521b3c370bcee6e7cd6363d1a39a565533d7ed2424d6fbe
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.12.2"
+  rive_common:
+    dependency: transitive
+    description:
+      name: rive_common
+      sha256: f4e20d0a99c5040c85624a3eb2b0b6b19e614d93a693c3bb25cf6e7bb2d3d6d3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.8"
   simple_animations:
     dependency: "direct main"
     description:

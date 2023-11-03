@@ -23,6 +23,9 @@ dependencies:
   # Google Fonts To use over 900+ fonts from fonts.google.com
   google_fonts: ^6.1.0
 
+  # Riv animation in Splash Screen
+  rive: ^0.12.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

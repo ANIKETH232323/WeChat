@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wechat/Screens/Message/PersonalMessageScreen.dart';
+import 'package:wechat/Screens/SplashScreen.dart';
 
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const PersonalMessageScreen()
+      // home: const PersonalMessageScreen()
+      home: const SplashScreen(),
     );
   }
 }
