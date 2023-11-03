@@ -20,8 +20,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PersonalMessageScreen(),));
+    Timer(const Duration(seconds: 5), () {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PersonalMessageScreen(),));
     });
 
   }
@@ -30,18 +30,17 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return   Stack(
       children: [
-        RiveAnimation.asset(
+        const RiveAnimation.asset(
           'images/message_icon.riv',
-          fit: BoxFit.scaleDown,
+          fit: BoxFit.cover,
         ),
         Center(
           child: SizedBox(
             child: Material(
               type: MaterialType.transparency,
                 child: Container(
-
-                  margin: EdgeInsets.only(top: 350,),
-                  child: Text("WeChat",
+                  margin: const EdgeInsets.only(top: 350,),
+                  child: const Text("WeChat",
                     style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2),
                   ),
                 )),

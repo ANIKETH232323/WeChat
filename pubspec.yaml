@@ -26,6 +26,8 @@ dependencies:
   # Riv animation in Splash Screen
   rive: ^0.12.2
 
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
