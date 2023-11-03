@@ -30,11 +30,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return   Stack(
       children: [
-        const Center(
-          child: RiveAnimation.asset(
-            'images/message_icon.riv',
-            fit: BoxFit.cover,
-          ),
+        RiveAnimation.asset(
+          'images/message_icon.riv',
+          fit: BoxFit.scaleDown,
         ),
         Center(
           child: SizedBox(
