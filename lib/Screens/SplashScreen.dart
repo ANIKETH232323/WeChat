@@ -39,7 +39,6 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Material(
               type: MaterialType.transparency,
                 child: Container(
-
                   margin: EdgeInsets.only(top: 350,),
                   child: Text("WeChat",
                     style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2),
