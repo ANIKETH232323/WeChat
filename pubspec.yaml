@@ -25,7 +25,14 @@ dependencies:
 
   # Riv animation in Splash Screen
   rive: ^0.12.2
+  lottie: ^2.7.0
 
+  # Firebase Plugins
+  firebase_core: ^2.21.0 # For integration App to FireBase
+  firebase_auth: ^4.12.1 # For Handling Firebase Authentication
+
+  # Google Sign-In Plugins
+  google_sign_in: ^6.1.5 # For handling Google Sign In
 
 
 dev_dependencies:
@@ -40,4 +47,6 @@ flutter:
 
   assets:
     - images/
+    - animation/
+    - fonts/
 

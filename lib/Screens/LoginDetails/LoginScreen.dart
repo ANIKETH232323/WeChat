@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 
-import '../Animation/loginPageAnimation.dart';
+import '../../Animation/loginPageAnimation.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -10,6 +13,29 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  _HandleGoogleBtnClick(){
+    _signInWithGoogle().then((user) {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>HomeScreen() ));
+    });
+  }
+
+  Future<UserCredential> _signInWithGoogle() async {
+    // Trigger the authentication flow
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+    // Create a new credential
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+
+    // Once signed in, return the UserCredential
+    return await FirebaseAuth.instance.signInWithCredential(credential);
+  }
 
 
   @override
@@ -66,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                   delay: 1.1,
                   child: InkWell(
                     onTap: () {
-
+                      _HandleGoogleBtnClick();
                     },
                     borderRadius: const BorderRadius.all(Radius.circular(100)),
                     child: Container(
@@ -104,3 +130,5 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+

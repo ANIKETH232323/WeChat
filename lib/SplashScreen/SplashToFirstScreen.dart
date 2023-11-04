@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:wechat/Screens/LoginScreen.dart';
+import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
 
 class SplashScreenToFirst extends StatefulWidget {
   const SplashScreenToFirst({super.key});

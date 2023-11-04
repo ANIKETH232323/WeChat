@@ -1,7 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rive/rive.dart' hide RadialGradient;
+import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
+import 'package:wechat/SplashScreen/SplashToFirstScreen.dart';
+import 'package:wechat/Themes/constants.dart';
 
 
 import 'Message/PersonalMessageScreen.dart';
@@ -21,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PersonalMessageScreen(),));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SplashScreenToFirst(),));
     });
 
   }
@@ -30,10 +34,15 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return   Stack(
       children: [
-        const RiveAnimation.asset(
-          'images/message_icon.riv',
-          fit: BoxFit.cover,
-        ),
+        // const RiveAnimation.asset(
+        //   'images/message_icon.riv',
+        //   fit: BoxFit.cover,
+        // ),
+        Container(
+            color: kPrimaryColor,
+            child: Center(
+                child: Lottie.asset(
+                    "animation/chat_icon.json"))),
         Center(
           child: SizedBox(
             child: Material(
