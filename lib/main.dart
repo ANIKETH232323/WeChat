@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wechat/Screens/LoginScreen.dart';
 import 'package:wechat/Screens/Message/PersonalMessageScreen.dart';
 import 'package:wechat/Screens/SplashScreen.dart';
 
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       // home: const PersonalMessageScreen()
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
+      home: const LoginPage(),
     );
   }
 }
