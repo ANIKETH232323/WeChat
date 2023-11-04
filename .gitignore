@@ -44,6 +44,5 @@ app.*.map.json
 /android/app/release
 
 # Exclude From Github
-firebase_options.dart
-google-services.json
-
+/lib/firebase_options.dart
+/android/app/google-services.json
