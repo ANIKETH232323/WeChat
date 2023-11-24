@@ -15,6 +15,8 @@ class Landing_Page extends StatelessWidget {
 
     final h = MediaQuery.of(context).size;
 
+    bool? ischecked = false;
+
     return  Scaffold(
       body: SafeArea(
           child: Center(
@@ -27,19 +29,35 @@ class Landing_Page extends StatelessWidget {
             ),
             SizedBox(height: h.height/9,),
             Image.asset("images/bg_landing.png",height: 350,width: 350,color: kPrimaryColor,),
-            SizedBox(height: h.height / 20),
-            const Padding(
-              padding: EdgeInsets.all(25.0),
-              child: Text("Read our Privacy Policy. Tap ""Agree and continue"" to accept  the Terms of Service.",
-                style: TextStyle(color: Colors.white,wordSpacing: 2),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: 20,),
+            SizedBox(height: h.height / 17),
+             Padding(
+              padding: const EdgeInsets.all(10.0),
+              child:
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const Text("Read our Privacy Policy. Tap ""Agree and continue"" \nto accept  the Terms of Service.",
+                        style: TextStyle(color: Colors.white,fontSize: 15),
+                        textAlign: TextAlign.center,
+                      ),
+                      Checkbox(value: ischecked, onChanged: (bool? newvalue){
+
+                        ischecked = newvalue;
+
+
+                      }),
+                    ],
+                  ),),
+
+
+
+
+
+            const SizedBox(height: 20,),
             ElevatedButton(onPressed: ()=> navigatorLoginScreen(context),
-                child:Text("Agree and Continue"),
+                child:const Text("Agree and Continue"),
               style: ElevatedButton.styleFrom(backgroundColor: kPrimaryColor,
-                minimumSize: Size(350, 50)
+                minimumSize: const Size(350, 50)
               ),
             )
           ],
