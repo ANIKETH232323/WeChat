@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
-import 'package:wechat/SplashScreen/SplashToFirstScreen.dart';
 import 'package:wechat/Themes/constants.dart';
 
 

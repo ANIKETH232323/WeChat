@@ -55,10 +55,10 @@ class Landing_Page extends StatelessWidget {
 
             const SizedBox(height: 20,),
             ElevatedButton(onPressed: ()=> navigatorLoginScreen(context),
-                child:const Text("Agree and Continue"),
               style: ElevatedButton.styleFrom(backgroundColor: kPrimaryColor,
                 minimumSize: const Size(350, 50)
               ),
+                child:const Text("Agree and Continue"),
             )
           ],
         ),
