@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wechat/Animation/transition.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
 import 'package:wechat/Themes/constants.dart';
 
@@ -33,20 +34,25 @@ class Landing_Page extends StatelessWidget {
              Padding(
               padding: const EdgeInsets.all(10.0),
               child:
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      const Text("Read our Privacy Policy. Tap ""Agree and continue"" \nto accept  the Terms of Service.",
-                        style: TextStyle(color: Colors.white,fontSize: 15),
-                        textAlign: TextAlign.center,
-                      ),
-                      Checkbox(value: ischecked, onChanged: (bool? newvalue){
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, AppTransition().term_And_Cond);
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        const Text("Read our Privacy Policy. Tap ""Agree and continue"" \nto accept  the Terms of Service.",
+                          style: TextStyle(color: Colors.white,fontSize: 15),
+                          textAlign: TextAlign.center,
+                        ),
+                        Checkbox(value: ischecked, onChanged: (bool? newvalue){
 
-                        ischecked = newvalue;
+                          ischecked = newvalue;
 
 
-                      }),
-                    ],
+                        }),
+                      ],
+                    ),
                   ),),
 
 
