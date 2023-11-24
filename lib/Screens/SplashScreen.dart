@@ -31,10 +31,6 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return   Stack(
       children: [
-        // const RiveAnimation.asset(
-        //   'images/message_icon.riv',
-        //   fit: BoxFit.cover,
-        // ),
         Container(
             color: kPrimaryColor,
             child: Center(
@@ -45,9 +41,16 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Material(
               type: MaterialType.transparency,
                 child: Container(
-                  margin: const EdgeInsets.only(top: 350,),
-                  child: const Text("WeChat",
-                    style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2),
+                  margin: const EdgeInsets.only(top: 560,),
+                  child: const Column(
+                    children: [
+                      Text("WeChat",
+                        style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2,),
+                      ),
+                      Text("\nMade In India With Flutter",
+                          style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,letterSpacing: 1,)
+                      )
+                    ],
                   ),
                 )),
           ),
