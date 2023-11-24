@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:wechat/SplashScreen/landing_page.dart';
+import 'package:wechat/router.dart';
 import 'firebase_options.dart';
 import 'package:wechat/Screens/SplashScreen.dart';
 
@@ -22,8 +24,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      // home: const PersonalMessageScreen()
-      home: const SplashScreen(),
+      onGenerateRoute: (Settings) => generateRoutes(Settings),
+      home: const Landing_Page(),
     );
   }
 }

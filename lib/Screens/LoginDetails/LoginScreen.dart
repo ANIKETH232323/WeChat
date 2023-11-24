@@ -6,6 +6,8 @@ import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 import '../../Animation/loginPageAnimation.dart';
 
 class LoginPage extends StatefulWidget {
+
+  static const LoginRoutName = '/login_screen';
   const LoginPage({super.key});
 
   @override

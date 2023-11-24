@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
-      <change beforePath="$PROJECT_DIR$/lib/Screens/SplashScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/SplashScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bg_landing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/SplashScreen/landing_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/LoginDetails/LoginScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/LoginDetails/LoginScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700811412051</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Done">
+      <created>1700811896115</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700811896115</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
