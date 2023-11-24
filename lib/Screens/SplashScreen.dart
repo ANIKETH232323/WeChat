@@ -2,13 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rive/rive.dart' hide RadialGradient;
-import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
 import 'package:wechat/SplashScreen/SplashToFirstScreen.dart';
 import 'package:wechat/Themes/constants.dart';
 
 
-import 'Message/PersonalMessageScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
 
   _HandleGoogleBtnClick(){
     _signInWithGoogle().then((user) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>HomeScreen() ));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
     });
   }
 
