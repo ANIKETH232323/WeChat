@@ -60,17 +60,26 @@ class _Term_And_ConState extends State<Term_And_Con> {
             height: size.height,
             width: size.width,
             child: Container(
-              color: kPrimaryColor,
+
               child: Column(
                 children: [
 
                   Expanded(child: Container(
-                    color: Colors.lightGreen,
+
                   )),
 
                   Container(
                     height: 75,
-                    color: kPrimaryColor,
+                    decoration: const BoxDecoration(
+                      color: kPrimaryColor,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey,
+                          offset: Offset(1.0, 0.0), //(x,y)
+                          blurRadius: 6.0,
+                        ),
+                      ],
+                    ),
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: size.width * .035),
                       child: Row(
@@ -111,7 +120,7 @@ class AcceptButton extends StatelessWidget {
           backgroundColor: isAccepted ? Colors.red : Colors.white,
             shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))
         ),
-          onPressed: (){} ,
+          onPressed: ()=> onTap() ,
           child:Text(name,
             textAlign: TextAlign.center,
             style: GoogleFonts.roboto(
