@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
 import 'package:wechat/SplashScreen/SplashToFirstScreen.dart';
 import 'package:wechat/Themes/constants.dart';
 
@@ -21,8 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SplashScreenToFirst(),));
+    Timer(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginPage(),));
     });
 
   }
