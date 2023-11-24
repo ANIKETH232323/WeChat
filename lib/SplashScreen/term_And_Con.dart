@@ -59,12 +59,14 @@ class _Term_And_ConState extends State<Term_And_Con> {
                   ),
                 ),
                 
-                Expanded(child: Container()),
+                Expanded(child: Container(
+                  color: Colors.lightGreen,
+                )),
 
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10.0),
                   child: Container(
-
+                    color: Colors.transparent,
                     margin: EdgeInsets.symmetric(horizontal: size.width * .035),
                     child: Row(
                       children: [
