@@ -16,69 +16,75 @@ class _Term_And_ConState extends State<Term_And_Con> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        toolbarHeight: 100,
+        backgroundColor: kPrimaryColor,
+        leading: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Icon(
+            Icons.article_outlined,
+            size: size.height * .075,
+            color: Colors.white,
+          ),
+        ),
+        title: Row(
+          children: [
+            Expanded(
+              child: Column(
+                children: [
+                  const Center(
+                    child: Text("Terms Of Services And Privacy Policy",
+                      style: TextStyle(fontSize: 17,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: size.height * .005),
+                  const Center(
+                    child: Text("Last Updated: November 24,2023",
+                      style: TextStyle(fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
           child: SizedBox(
             height: size.height,
             width: size.width,
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.article_outlined,
-                        size: size.height * .075,
-                        color: kPrimaryColor,
-                      ),
-                       Expanded(
-                        child: Column(
-                          children: [
-                            const Center(
-                              child: Text("Terms Of Services And Privacy Policy",
-                                style: TextStyle(fontSize: 17,
-                                fontWeight: FontWeight.w700,
-                                color: kPrimaryColor
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: size.height * .005),
-                            const Center(
-                              child: Text("Last Updated: November 24,2023",
-                                style: TextStyle(fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                    color: kPrimaryColor
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+            child: Container(
+              color: kPrimaryColor,
+              child: Column(
+                children: [
 
-                    ],
-                  ),
-                ),
-                
-                Expanded(child: Container(
-                  color: Colors.lightGreen,
-                )),
+                  Expanded(child: Container(
+                    color: Colors.lightGreen,
+                  )),
 
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0),
-                  child: Container(
-                    color: Colors.transparent,
-                    margin: EdgeInsets.symmetric(horizontal: size.width * .035),
-                    child: Row(
-                      children: [
-                        Expanded(child: AcceptButton(name: "Decline", onTap: (){})),
-                        SizedBox(width: size.width *.02,),
-                        Expanded(child: AcceptButton(name: "Accept",isAccepted: true, onTap: (){})),
-                      ],
+                  Container(
+                    height: 75,
+                    color: kPrimaryColor,
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: size.width * .035),
+                      child: Row(
+                        children: [
+                          Expanded(child: AcceptButton(name: "Decline", onTap: (){})),
+                          SizedBox(width: size.width *.02,),
+                          Expanded(child: AcceptButton(name: "Accept",isAccepted: true, onTap: (){})),
+                        ],
+                      ),
                     ),
-                  ),
-                )
+                  )
 
-              ],
+                ],
+              ),
             ),
           )),
 
