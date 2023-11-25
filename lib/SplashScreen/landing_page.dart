@@ -31,7 +31,7 @@ class _Landing_PageState extends State<Landing_Page> {
                 const SizedBox(height: 50),
                 const Text(
                   "Welcome to WeChat",
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: h.height/9,),
                 Image.asset("images/bg_landing.png",height: 350,width: 350,color: kPrimaryColor,),
@@ -45,18 +45,19 @@ class _Landing_PageState extends State<Landing_Page> {
                       RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
-                              style: const TextStyle(color: Colors.white,fontSize: 15),
+                              style: const TextStyle(color: kPrimaryColor,fontSize: 15),
                             children: [
-                              const TextSpan(text: "Read our "),
-                              TextSpan(text: "Privacy Policy. ",style: const TextStyle(color: Colors.blueAccent),
+                              const TextSpan(text: "Read our ",style: TextStyle(fontSize: 16)),
+                              TextSpan(text: "Privacy Policy. ",style: const TextStyle(color: Colors.blueAccent,fontSize: 16),
+
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       Navigator.push(context, AppTransition().term_And_Cond);
                                     }),
-                              const TextSpan(text: "Tap "),
-                              const TextSpan(text: '"Agree and continue"',style: TextStyle(fontWeight: FontWeight.w700)),
-                              const TextSpan(text: "\n to accept the"),
-                              TextSpan(text: " Terms of Service.",style: const TextStyle(color: Colors.blueAccent),
+                              const TextSpan(text: "Tap ",style: TextStyle(fontSize: 16)),
+                              const TextSpan(text: '"Agree and continue"',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15)),
+                              const TextSpan(text: "\n to accept the",style: TextStyle(fontSize: 16)),
+                              TextSpan(text: " Terms of Service.",style: const TextStyle(color: Colors.blueAccent,fontSize: 16),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       Navigator.push(context, AppTransition().term_And_Cond);
@@ -78,7 +79,7 @@ class _Landing_PageState extends State<Landing_Page> {
                       minimumSize: const Size(350, 50),
                     shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15)))
                   ),
-                  child:const Text("Agree and Continue"),
+                  child:const Text("Agree and Continue",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 17)),
                 )
               ],
             ),

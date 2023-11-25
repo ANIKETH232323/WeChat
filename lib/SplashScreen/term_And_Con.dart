@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:wechat/SplashScreen/landing_page.dart';
 import 'package:wechat/Themes/constants.dart';
 
@@ -21,10 +20,10 @@ class Term_And_Con extends StatelessWidget {
           SliverAppBar(
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsets.only(top: 15.0,left: 15),
+              padding: const EdgeInsets.only(top: 15.0,left: 15),
               child: InkWell(
                 onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Landing_Page(),)),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back_ios,
                   size: 35,
                 ),
