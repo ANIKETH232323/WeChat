@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:wechat/Animation/transition.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
-import 'package:wechat/SplashScreen/term_And_Con.dart';
 import 'package:wechat/Themes/constants.dart';
 
 
@@ -76,7 +75,8 @@ class _Landing_PageState extends State<Landing_Page> {
                 const SizedBox(height: 20,),
                 ElevatedButton(onPressed: ()=> navigatorLoginScreen(context),
                   style: ElevatedButton.styleFrom(backgroundColor: kPrimaryColor,
-                      minimumSize: const Size(350, 50)
+                      minimumSize: const Size(350, 50),
+                    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15)))
                   ),
                   child:const Text("Agree and Continue"),
                 )
