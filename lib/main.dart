@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       onGenerateRoute: (Settings) => generateRoutes(Settings),
-      home: const Landing_Page(),
+      home: Landing_Page(),
     );
   }
 }
