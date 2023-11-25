@@ -5,16 +5,6 @@ import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
 import 'package:wechat/SplashScreen/term_And_Con.dart';
 import 'package:wechat/Themes/constants.dart';
 
-// class Landing_Page extends StatelessWidget {
-//
-//   static const Landing_PageRoutName = '/landing_screen';
-//   Landing_Page({super.key});
-//
-//
-//   void navigatorLoginScreen(BuildContext context){
-//     Navigator.pushNamed(context, LoginPage.LoginRoutName);
-//   }
-
 
 class Landing_Page extends StatefulWidget {
   const Landing_Page({super.key});
@@ -29,15 +19,11 @@ void navigatorLoginScreen(BuildContext context){
 
 class _Landing_PageState extends State<Landing_Page> {
 
-  bool ischecked = false;
   @override
 
   Widget build(BuildContext context) {
 
     final h = MediaQuery.of(context).size;
-
-
-
     return  Scaffold(
       body: SafeArea(
           child: Center(

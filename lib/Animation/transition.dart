@@ -5,9 +5,9 @@ import 'package:wechat/SplashScreen/term_And_Con.dart';
 class AppTransition{
   PageTransition term_And_Cond = PageTransition(
       child: Term_And_Con(),
-      type: PageTransitionType.rotate,
+      type: PageTransitionType.bottomToTop,
       alignment: Alignment.center,
-    curve: Curves.easeInOutBack,
-    duration: Duration(milliseconds: 800),
+    curve: Curves.easeIn,
+    duration: const Duration(milliseconds: 500),
   );
 }
