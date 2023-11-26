@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
+import 'package:wechat/SplashScreen/landing_page.dart';
 import 'package:wechat/Themes/constants.dart';
 
 
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginPage(),));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Landing_Page(),));
     });
 
   }
