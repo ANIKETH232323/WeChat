@@ -13,7 +13,9 @@ class Landing_Page extends StatefulWidget {
   State<Landing_Page> createState() => _Landing_PageState();
 }
 void navigatorLoginScreen(BuildContext context){
-    Navigator.pushNamed(context, LoginPage.LoginRoutName);
+  Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (BuildContext context) {
+    return LoginPage();
+  },), (route) => false);
   }
 
 class _Landing_PageState extends State<Landing_Page> {
