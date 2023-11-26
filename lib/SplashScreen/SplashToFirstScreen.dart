@@ -11,6 +11,17 @@ class SplashScreenToFirst extends StatefulWidget {
 
 class _SplashScreenToFirstState extends State<SplashScreenToFirst> with TickerProviderStateMixin {
 
+//////////////////////////////////
+
+///////////////////////////////// Not Needed This Dart file fill free to Delete /////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 
   // To control the Animation
   late AnimationController _rippleController;
