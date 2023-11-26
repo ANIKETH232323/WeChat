@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:wechat/Animation/transition.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
 import 'package:wechat/Themes/constants.dart';
+import 'package:wechat/dialoge_box/policy_dialoge.dart';
 
 
 class Landing_Page extends StatefulWidget {
@@ -38,38 +39,38 @@ class _Landing_PageState extends State<Landing_Page> {
                 SizedBox(height: h.height/9,),
                 Image.asset("images/bg_landing.png",height: 350,width: 350,color: kPrimaryColor,),
                 SizedBox(height: h.height / 17),
-                Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child:
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      RichText(
-                          textAlign: TextAlign.center,
-                          text: TextSpan(
-                              style: const TextStyle(color: kPrimaryColor,fontSize: 15),
-                            children: [
-                              const TextSpan(text: "Read our ",style: TextStyle(fontSize: 16)),
-                              TextSpan(text: "Privacy Policy. ",style: const TextStyle(color: Colors.blueAccent,fontSize: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
+                            style: const TextStyle(color: kPrimaryColor,fontSize: 15),
+                          children: [
+                            const TextSpan(text: "Read our ",style: TextStyle(fontSize: 16)),
+                            TextSpan(text: "Privacy Policy. ",style: const TextStyle(color: Colors.blueAccent,fontSize: 16),
 
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      Navigator.push(context, AppTransition().term_And_Cond);
-                                    }),
-                              const TextSpan(text: "Tap ",style: TextStyle(fontSize: 16)),
-                              const TextSpan(text: '"Agree and continue"',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15)),
-                              const TextSpan(text: "\n to accept the",style: TextStyle(fontSize: 16)),
-                              TextSpan(text: " Terms of Service.",style: const TextStyle(color: Colors.blueAccent,fontSize: 16),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      Navigator.push(context, AppTransition().term_And_Cond);
-                                    },
-                              ),
-                            ]
-                          )
-                      ),
-                    ],
-                  ),),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                      // Navigator.push(context, AppTransition().term_And_Cond);
+                                    showDialog(context: context, builder: (context) {
+                                      return Policy_PopUp(mdFile:'privacy_policy.md');
+                                    },);
+                                  }),
+                            const TextSpan(text: "Tap ",style: TextStyle(fontSize: 16)),
+                            const TextSpan(text: '"Agree and continue"',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15)),
+                            const TextSpan(text: "\n to accept the",style: TextStyle(fontSize: 16)),
+                            TextSpan(text: " Terms of Service.",style: const TextStyle(color: Colors.blueAccent,fontSize: 16),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.push(context, AppTransition().term_And_Cond);
+                                  },
+                            ),
+                          ]
+                        )
+                    ),
+                  ],
+                ),
 
 
 

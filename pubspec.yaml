@@ -34,6 +34,9 @@ dependencies:
   # Google Sign-In Plugins
   google_sign_in: ^6.1.5 # For handling Google Sign In
 
+  # Mark Down for Privacy and Term and Condition Policy
+  flutter_markdown: ^0.6.18+3
+
 
 
 dev_dependencies:
@@ -50,4 +53,5 @@ flutter:
     - images/
     - animation/
     - fonts/
+    - termandcond/
 
