@@ -20,8 +20,8 @@ class Policy_PopUp extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(radius),
       ),
-      child:SizedBox(
-        width: 405,
+      child:Container(
+        height: 600,
         child: Column(
           children: [
             Expanded(child: FutureBuilder(
@@ -52,7 +52,7 @@ class Policy_PopUp extends StatelessWidget {
               ),
               child: TextButton(
                   onPressed: () =>Navigator.of(context).pop(),
-                    child: const Text("CLOSE"),
+                    child: const Text("CLOSE",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
                   ),
             )
           ],

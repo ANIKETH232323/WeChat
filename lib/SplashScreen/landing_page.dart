@@ -63,7 +63,10 @@ class _Landing_PageState extends State<Landing_Page> {
                             TextSpan(text: " Terms of Service.",style: const TextStyle(color: Colors.blueAccent,fontSize: 16),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
-                                    Navigator.push(context, AppTransition().term_And_Cond);
+                                    // Navigator.push(context, AppTransition().term_And_Cond);
+                                    showDialog(context: context, builder: (context) {
+                                      return Policy_PopUp(mdFile:'termandcondition.md');
+                                    },);
                                   },
                             ),
                           ]
