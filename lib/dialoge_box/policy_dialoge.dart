@@ -17,6 +17,7 @@ class Policy_PopUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      insetPadding: EdgeInsets.all(25),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(radius),
       ),
@@ -32,7 +33,8 @@ class Policy_PopUp extends StatelessWidget {
 
               if(snapshot.hasData){
                 return Markdown(
-                    data: snapshot.data.toString()
+                    data: snapshot.data.toString(),
+                  shrinkWrap: true,
                 );
               }
 

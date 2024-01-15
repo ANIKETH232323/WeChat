@@ -54,7 +54,7 @@ class _Landing_PageState extends State<Landing_Page> {
                                   ..onTap = () {
                                       // Navigator.push(context, AppTransition().term_And_Cond);
                                     showDialog(context: context, builder: (context) {
-                                      return Policy_PopUp(mdFile:'privacy_policy.md');
+                                      return const Policy_PopUp(mdFile:'privacy_policy.md');
                                     },);
                                   }),
                             const TextSpan(text: "Tap ",style: TextStyle(fontSize: 16)),
@@ -65,7 +65,7 @@ class _Landing_PageState extends State<Landing_Page> {
                                   ..onTap = () {
                                     // Navigator.push(context, AppTransition().term_And_Cond);
                                     showDialog(context: context, builder: (context) {
-                                      return Policy_PopUp(mdFile:'termandcondition.md');
+                                      return const Policy_PopUp(mdFile:'termandcondition.md');
                                     },);
                                   },
                             ),
