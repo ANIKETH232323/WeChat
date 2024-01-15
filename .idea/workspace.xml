@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
-      <change afterPath="$PROJECT_DIR$/termandcond/pri_poli.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/termandcond/termandcon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ignore_files.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/landing_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/landing_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/dialoge_box/policy_dialoge.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialoge_box/policy_dialoge.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/termandcond/privacy_policy.md" beforeDir="false" afterPath="$PROJECT_DIR$/termandcond/privacy_policy.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/termandcond/termandcondition.md" beforeDir="false" afterPath="$PROJECT_DIR$/termandcond/termandcondition.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705244171933</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Done">
+      <option name="closed" value="true" />
+      <created>1705341469928</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1705341469928</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
