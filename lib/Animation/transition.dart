@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:wechat/SplashScreen/term_And_Con.dart';
+
+
+// delete later
 
 class AppTransition{
   PageTransition term_And_Cond = PageTransition(
-      child: Term_And_Con(),
+      child: Container(),
       type: PageTransitionType.bottomToTop,
       alignment: Alignment.center,
     curve: Curves.easeIn,

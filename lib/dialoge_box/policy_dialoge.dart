@@ -37,7 +37,6 @@ class Policy_PopUp extends StatelessWidget {
                 return Markdown(
                     data: snapshot.data.toString(),
                   shrinkWrap: true,
-                  selectable: true,
                   onTapLink: (text, href, title) {
                       if(text == "Google Play Services"){
                         final Uri _i = Uri.parse(href!);

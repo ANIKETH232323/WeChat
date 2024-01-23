@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
 import 'package:wechat/SplashScreen/landing_page.dart';
-import 'package:wechat/SplashScreen/term_And_Con.dart';
+
+// Delete later
 
 Route<dynamic> generateRoutes(RouteSettings settings){
   switch(settings.name){
