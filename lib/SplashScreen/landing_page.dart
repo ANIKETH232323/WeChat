@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:wechat/Animation/transition.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
+import 'package:wechat/Screens/LoginDetails/LoginScreen1.dart';
 import 'package:wechat/Themes/constants.dart';
 import 'package:wechat/dialoge_box/policy_dialoge.dart';
 
@@ -15,7 +16,7 @@ class Landing_Page extends StatefulWidget {
 }
 void navigatorLoginScreen(BuildContext context){
   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (BuildContext context) {
-    return LoginPage();
+    return const LoginPage1();
   },), (route) => false);
   }
 
