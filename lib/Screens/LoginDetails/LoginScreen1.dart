@@ -14,7 +14,7 @@ class LoginPage1 extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-            padding: const EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 150),
             height: double.maxFinite,
             color: Colors.white,
               child: Lottie.asset("animation/hello.json",alignment: Alignment.topCenter),

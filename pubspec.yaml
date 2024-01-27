@@ -58,6 +58,5 @@ flutter:
   assets:
     - images/
     - animation/
-    - fonts/
     - termandcond/
 
