@@ -40,6 +40,9 @@ dependencies:
   # For navigating markdown to A website
   url_launcher: ^6.2.3
 
+  # Successfully Sign in Snack Bar
+  awesome_snackbar_content: ^0.1.3
+
 
 
 dev_dependencies:
