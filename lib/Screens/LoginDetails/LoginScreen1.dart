@@ -1,11 +1,96 @@
+import 'dart:developer';
+import 'dart:io';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 
 import '../../Animation/loginPageAnimation.dart';
+import '../../dialoge_box/snackBar.dart';
 
-class LoginPage1 extends StatelessWidget {
+class LoginPage1 extends StatefulWidget {
   const LoginPage1({super.key});
+
+  @override
+  State<LoginPage1> createState() => _LoginPage1State();
+}
+
+class _LoginPage1State  extends State<LoginPage1>{
+
+
+
+  _signInGoogleBtn(){
+
+    // for showing progress bar
+    SnackBar1.showProgressBar(context);
+    _signInWithGoogle().then((user) {
+      // for hiding progress bar
+      Navigator.pop(context);
+      if(user != null){
+        log('\nuser:${user.user}');
+        log('\nuser:${user.additionalUserInfo}');
+        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => const HomeScreen(),));
+      }
+    },);
+  }
+
+
+  // Google Sign-in code
+  Future<UserCredential?> _signInWithGoogle() async {
+    try{
+      await InternetAddress.lookup('google.com');
+      // Trigger the authentication flow
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+      // Obtain the auth details from the request
+      final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+      // Create a new credential
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      // Once signed in, return the UserCredential
+      return await FirebaseAuth.instance.signInWithCredential(credential);
+    }
+    catch(e){
+      
+      log('The error is $e');
+      final Snackbar = SnackBar(
+        elevation: 0,
+        padding: EdgeInsets.all(45),
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Colors.transparent,
+        content: SizedBox(
+          height: 85,
+          child: AwesomeSnackbarContent(
+              title: "Congratulations",
+              message: "Sign-In Complete",
+              contentType: ContentType.success),
+        ),
+      );
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(Snackbar);
+      return null;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +101,6 @@ class LoginPage1 extends StatelessWidget {
             Container(
             padding: const EdgeInsets.only(top: 150),
             height: double.maxFinite,
-            color: Colors.white,
               child: Lottie.asset("animation/hello.json",alignment: Alignment.topCenter),
         ),
             Padding(
@@ -27,23 +111,7 @@ class LoginPage1 extends StatelessWidget {
                   delay: 1,
                   child: InkWell(
                     onTap: () {
-                      // _HandleGoogleBtnClick();
-                      final Snackbar = SnackBar(
-                        elevation: 0,
-                        padding: EdgeInsets.all(45),
-                        behavior: SnackBarBehavior.floating,
-                        backgroundColor: Colors.transparent,
-                        content: SizedBox(
-                          height: 85,
-                          child: AwesomeSnackbarContent(
-                              title: "Congratulations",
-                              message: "Sign-In Complete",
-                              contentType: ContentType.success),
-                        ),
-                      );
-                          ScaffoldMessenger.of(context)
-                      ..hideCurrentSnackBar()
-                      ..showSnackBar(Snackbar);
+                      _signInGoogleBtn();
                     },
                     borderRadius: const BorderRadius.all(Radius.circular(100)),
                     child: Container(

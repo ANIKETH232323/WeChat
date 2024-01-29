@@ -1,7 +1,11 @@
 import 'dart:async';
+import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 import 'package:wechat/SplashScreen/landing_page.dart';
 import 'package:wechat/Themes/constants.dart';
 
@@ -20,9 +24,17 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Landing_Page(),));
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+      SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.black));
+      if(FirebaseAuth.instance.currentUser != null){
+        log('\nuser:${FirebaseAuth.instance.currentUser}');
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
+      }
+      else{
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Landing_Page(),));
+      }
+
     });
 
   }

@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/services.dart';
 import 'package:wechat/Screens/SplashScreen.dart';
 import 'package:wechat/router.dart';
 import 'firebase_options.dart';
@@ -8,8 +9,16 @@ import 'firebase_options.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   DartPluginRegistrant.ensureInitialized();
-  _initializeFirebase();
-  runApp(const MyApp());
+
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]).then(
+          (value) {
+            _initializeFirebase();
+            runApp(const MyApp());
+          },
+
+  );
+
 }
 
 class MyApp extends StatelessWidget {
