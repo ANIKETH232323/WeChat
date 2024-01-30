@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
+import 'package:wechat/Api/Api.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 import 'package:wechat/SplashScreen/landing_page.dart';
 import 'package:wechat/Themes/constants.dart';
@@ -27,8 +28,8 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 3), () {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
       SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.black));
-      if(FirebaseAuth.instance.currentUser != null){
-        log('\nuser:${FirebaseAuth.instance.currentUser}');
+      if(Api.auth.currentUser != null){
+        log('\nuser:${Api.auth.currentUser}');
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
       }
       else{

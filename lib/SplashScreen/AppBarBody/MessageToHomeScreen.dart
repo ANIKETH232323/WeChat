@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wechat/SplashScreen/AppBarBody/Body.dart';
+import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
 import 'package:wechat/Themes/constants.dart';
 
 
@@ -11,8 +12,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: buildAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.only(bottom: 30.0,right: 20),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 20.0,right: 10),
         child: Stack(
           children: [
             Align(
@@ -24,6 +25,15 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+
+      body: ListView.builder(
+        padding: EdgeInsets.only(top: 10),
+        physics: const BouncingScrollPhysics(),
+        itemCount: 35,
+          itemBuilder: (context, index) {
+            return const HomeListDesign();
+          },
+      )
     );
   }
 
@@ -34,7 +44,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       title: const Column(
         children: [
-          Text("Wechat",style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
+          Text("WeChat",style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
 
         ],
       ),
