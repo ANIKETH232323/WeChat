@@ -1,9 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:wechat/Api/Api.dart';
 import 'package:wechat/SplashScreen/AppBarBody/Body.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
 import 'package:wechat/Themes/constants.dart';
 
+// ***************************************Main Chats List will be done here******************************************
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,13 +30,25 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      body: ListView.builder(
-        padding: EdgeInsets.only(top: 10),
-        physics: const BouncingScrollPhysics(),
-        itemCount: 35,
-          itemBuilder: (context, index) {
-            return const HomeListDesign();
-          },
+      body: StreamBuilder(
+        stream: Api.firestore.collection('user').snapshots(), //the user name should be same as firestore  database collection check that again
+        builder: (context, snapshot) {
+          if(snapshot.hasData){
+            final data = snapshot.data?.docs;
+            for(var i  in data!){
+              log('Data:${i.data()}');
+            }
+
+          }
+          return ListView.builder(
+            padding: const EdgeInsets.only(top: 10),
+            physics: const BouncingScrollPhysics(),
+            itemCount: 35,
+            itemBuilder: (context, index) {
+              return const HomeListDesign();
+            },
+          );
+        },
       )
     );
   }
