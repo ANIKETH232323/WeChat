@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:wechat/Model/chatUserModel.dart';
 import 'package:wechat/Themes/constants.dart';
@@ -22,7 +23,18 @@ class _HomeListDesignState extends State<HomeListDesign> {
             children: [
               Stack(
                 children: [
-                  const CircleAvatar(),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(25),
+                    child: CachedNetworkImage(
+                      height: 40,
+                      width: 40,
+                      imageUrl: widget.userModel.image,
+                      placeholder: (context, url) => CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                    ),
+                  ),
+
+
                   Positioned(
                     right: 2,
                     bottom: 2,
@@ -52,7 +64,17 @@ class _HomeListDesignState extends State<HomeListDesign> {
                 ),
               ),
 
-              const Opacity(opacity: 0.64,child: Text("8.14 PM")),
+              Padding(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: Container(
+                  height: 15,
+                  width: 15,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(25)
+                  ),
+                ),
+              )
 
             ],
           ),
