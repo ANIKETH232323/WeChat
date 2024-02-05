@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -7,10 +6,20 @@ import 'package:wechat/SplashScreen/AppBarBody/Body.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
 import 'package:wechat/Themes/constants.dart';
 
+import '../../Model/chatUserModel.dart';
+
 // ***************************************Main Chats List will be done here******************************************
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+
+  List<ChatUserModel> list = [];
 
   @override
   Widget build(BuildContext context) {
@@ -33,21 +42,36 @@ class HomeScreen extends StatelessWidget {
       body: StreamBuilder(
         stream: Api.firestore.collection('user').snapshots(), //the user name should be same as firestore  database collection check that again
         builder: (context, snapshot) {
-          if(snapshot.hasData){
-            final data = snapshot.data?.docs;
-            for(var i  in data!){
-              log('Data:${i.data()}');
+
+          switch(snapshot.connectionState){
+
+            case ConnectionState.waiting:
+            case ConnectionState.none:
+                    return const Center(child: CircularProgressIndicator());
+
+            case ConnectionState.active:
+            case ConnectionState.done:
+              if(snapshot.hasData){
+              final data = snapshot.data?.docs;
+              list = data?.map((e) => ChatUserModel.fromJson(e.data())).toList() ??[];
             }
+              if(list.isNotEmpty){
+                return ListView.builder(
+                  padding: const EdgeInsets.only(top: 15),
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: 1,
+                  itemBuilder: (context, index) {
+                    return HomeListDesign(userModel: list[index],);
+                  },
+                );
+              }
+              else{
+                return const Center(child: Text('No Connection Found',style: TextStyle(fontSize: 20
+                ),));
+              }
 
           }
-          return ListView.builder(
-            padding: const EdgeInsets.only(top: 10),
-            physics: const BouncingScrollPhysics(),
-            itemCount: 35,
-            itemBuilder: (context, index) {
-              return const HomeListDesign();
-            },
-          );
+
         },
       )
     );
