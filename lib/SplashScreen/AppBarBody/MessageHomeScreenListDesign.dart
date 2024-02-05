@@ -39,7 +39,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
               ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 19),
+                  padding: const EdgeInsets.symmetric(horizontal: 19),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -52,7 +52,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
                 ),
               ),
 
-              Opacity(opacity: 0.64,child: Text("8.14 PM")),
+              const Opacity(opacity: 0.64,child: Text("8.14 PM")),
 
             ],
           ),

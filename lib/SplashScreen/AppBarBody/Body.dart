@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 
 class BodyAppBar extends StatelessWidget {
