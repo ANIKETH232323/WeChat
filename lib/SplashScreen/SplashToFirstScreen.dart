@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:wechat/Screens/LoginDetails/LoginScreen.dart';
-
 class SplashScreenToFirst extends StatefulWidget {
   const SplashScreenToFirst({super.key});
 
@@ -53,7 +51,9 @@ class _SplashScreenToFirstState extends State<SplashScreenToFirst> with TickerPr
       if(status == AnimationStatus.completed){
         _scalecontroller.reverse();
         Navigator.pushAndRemoveUntil(context, PageTransition( type: PageTransitionType.fade,
-        child: const LoginPage()),(route) => false,);
+        child: Container(),
+        //const LoginPage()
+        ),(route) => false,);
       }
     });
 

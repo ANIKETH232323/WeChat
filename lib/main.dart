@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:wechat/Screens/SplashScreen.dart';
-import 'package:wechat/router.dart';
 import 'firebase_options.dart';
 
 void main() {
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      onGenerateRoute: (Settings) => generateRoutes(Settings),
+      // onGenerateRoute: (Settings) => generateRoutes(Settings),
       home: SplashScreen()
     );
   }
