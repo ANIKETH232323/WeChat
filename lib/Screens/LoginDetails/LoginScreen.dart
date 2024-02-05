@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:wechat/Api/Api.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 
 import '../../Animation/loginPageAnimation.dart';
@@ -17,9 +18,20 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
 
   _HandleGoogleBtnClick(){
-    _signInWithGoogle().then((user) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
-    });
+    _signInWithGoogle().then((user) async {
+
+      Navigator.pop(context);
+
+      if(await Api.checkUser()){
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
+      }
+      else{
+        Api.createUser().then((value) {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
+        });
+      }
+
+        });
   }
 
   Future<UserCredential> _signInWithGoogle() async {
