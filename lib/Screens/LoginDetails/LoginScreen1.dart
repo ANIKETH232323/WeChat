@@ -8,6 +8,7 @@ import 'package:lottie/lottie.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 
 import '../../Animation/loginPageAnimation.dart';
+import '../../Api/Api.dart';
 import '../../dialoge_box/snackBar.dart';
 
 class LoginPage1 extends StatefulWidget {
@@ -25,13 +26,24 @@ class _LoginPage1State  extends State<LoginPage1>{
 
     // for showing progress bar
     SnackBar1.showProgressBar(context);
-    _signInWithGoogle().then((user) {
+    _signInWithGoogle().then((user) async {
       // for hiding progress bar
       Navigator.pop(context);
       if(user != null){
         log('\nuser:${user.user}');
         log('\nuser:${user.additionalUserInfo}');
-        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => const HomeScreen(),));
+
+        if(await Api.checkUser()){
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
+        }
+        else{
+          await Api.createUser().then((value) {
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
+        });
+      }
+
+
+
       }
     },);
   }

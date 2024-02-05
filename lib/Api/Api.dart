@@ -22,13 +22,16 @@ class Api{
   // for creating a new user or creating new use account
   static Future<void> createUser() async{
     
-    final time  = DateTime.now().microsecondsSinceEpoch.toString();
+    final time  = DateTime.now().millisecondsSinceEpoch.toString();
 
-    final chatUser = ChatUserModel(image: user1.photoURL.toString(), about: "Hey,I am using WeChat", name: user1.displayName.toString(),
-        createdAt: time, isOnline: false, id: user1.uid ,
-        lastActive: time, email: user1.email.toString(), pushToken: "");
+    final chatUser = ChatUserModel(
+        image: auth.currentUser!.photoURL.toString(),
+        about: "Hey,I am using WeChat",
+        name: auth.currentUser!.displayName.toString(),
+        createdAt: time, isOnline: false, id: auth.currentUser!.uid ,
+        lastActive: time, email: auth.currentUser!.email.toString(), pushToken: "");
 
-    return await firestore.collection('user').doc(user1.uid).set(chatUser.toJson());
+    return await firestore.collection('user').doc(auth.currentUser!.uid).set(chatUser.toJson());
   }
 
 }

@@ -18,20 +18,11 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
 
   _HandleGoogleBtnClick(){
+
     _signInWithGoogle().then((user) async {
 
       Navigator.pop(context);
-
-      if(await Api.checkUser()){
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
-      }
-      else{
-        Api.createUser().then((value) {
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
-        });
-      }
-
-        });
+    });
   }
 
   Future<UserCredential> _signInWithGoogle() async {

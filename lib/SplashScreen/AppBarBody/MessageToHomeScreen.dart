@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 return ListView.builder(
                   padding: const EdgeInsets.only(top: 15),
                   physics: const BouncingScrollPhysics(),
-                  itemCount: 1,
+                  itemCount: list.length,
                   itemBuilder: (context, index) {
                     return HomeListDesign(userModel: list[index],);
                   },
