@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wechat/Api/Api.dart';
+import 'package:wechat/Screens/profile_screen.dart';
 import 'package:wechat/SplashScreen/AppBarBody/Body.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
 import 'package:wechat/Themes/constants.dart';
@@ -104,7 +105,9 @@ class _HomeScreenState extends State<HomeScreen> {
         IconButton(
             onPressed: (){}, icon: const Icon(Icons.search)),
         IconButton(
-            onPressed: (){}, icon: const Icon(Icons.account_circle))
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen(chatUserModel: list[0]),));
+            }, icon: const Icon(Icons.account_circle))
       ],
     );
   }
