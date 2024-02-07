@@ -26,101 +26,112 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
 
+          CardHolder(about: widget.chatUserModel.about,email: widget.chatUserModel.email),
           // Top App bar back button and Edit Profile Text
           Positioned(
             top: 0,
             right: 0,
             left: 0,
-            child: SizedBox(
-              height: 80,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
 
-                  // Back Button
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40, left: 20),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.arrow_back_ios_new,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
+                // Back Button
+                Padding(
+                  padding: const EdgeInsets.only(top: 40,left: 20),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back_ios_new,
+                      color: Colors.white,
                     ),
+                    onPressed: () {},
                   ),
+                ),
 
-                  // Edit Profile Text
-                  const Padding(
-                    padding: EdgeInsets.only(top: 40),
-                    child: Text(
-                      'Edit Profile',
-                      style: TextStyle(
+
+
+
+                // Log Out Button
+                Padding(
+                  padding: const EdgeInsets.only(top: 40, right: 20),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.power_settings_new_rounded,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+
+
+
+              ],
+            ),
+          ),
+
+          Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Edit Profile Text
+                const Padding(
+                  padding: EdgeInsets.only(top: 50,),
+                  child: Text(
+                    'Edit Profile',
+                    style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w700
-                      ),
                     ),
                   ),
+                ),
+                const SizedBox(height: 35,),
 
-                  // Edit Button Have to be removed
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40, right: 20),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.power_settings_new_rounded,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
+                Stack(
+                  children: [
+                    Container(
+                      height: 145,
+                      width: 145,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.yellow,
+                          border: Border.all(
+                              color: Colors.blueAccent.withOpacity(.2), width: 1)),
+                      child: const Icon(CupertinoIcons.person_alt_circle),
                     ),
-                  ),
 
-                ],
-              ),
+                    Positioned(
+                      top: 95,
+                      left: 95,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(25)
+                        ),
+                        child: IconButton(
+                          icon: const Icon(
+                            Icons.edit,
+                            color: Colors.blue,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+
+
+
+              ],
             ),
           ),
+          // Image Edit Button
 
-          CardHolder(about: widget.chatUserModel.about,email: widget.chatUserModel.email),
 
 
           //person image will be displayed here
-          Positioned(
-            top: 135,
-            left: 120,
-            child: Container(
-              height: 120,
-              width: 120,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100),
-                  color: Colors.green,
-                  border: Border.all(
-                      color: Colors.blueAccent.withOpacity(.2), width: 1)),
-              child: const Icon(CupertinoIcons.person_alt_circle),
-            ),
-          ),
 
-          // Image Edit Button
-          Padding(
-            padding: const EdgeInsets.only(top: 200,left: 210),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                borderRadius: BorderRadius.circular(25)
-              ),
-              child: IconButton(
-                icon: const Icon(
-                  Icons.edit,
-                  color: Colors.white,
-                ),
-                onPressed: () {},
-              ),
-            ),
-          ),
-
-
-
-          //
-          // CardHolder1(email: widget.chatUserModel.email),
-          // CardHolder2(about: widget.chatUserModel.about,)
 
         ],
       ),
@@ -137,7 +148,7 @@ class CardHolder extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 200, right: 15, left: 15),
       height: 450,
-      width: 400,
+      width: 450,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -152,7 +163,7 @@ class CardHolder extends StatelessWidget {
           const Card(),
           CardHolder1(email: email,about: about),
           Padding(
-            padding: const EdgeInsets.only(top: 20.0,right: 15,left: 15),
+            padding: const EdgeInsets.only(top: 20.0),
             child: Center(
               child: SizedBox(
                 child: ElevatedButton(
@@ -162,7 +173,7 @@ class CardHolder extends StatelessWidget {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       padding: const EdgeInsets.all(15),
                     ),
-                    child: const Text('Edit Profile')
+                    child: const Text('Update Profile')
                 ),),
             ),
           ),

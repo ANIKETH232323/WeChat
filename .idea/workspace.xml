@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done" />
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/profile_screen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -345,14 +348,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00060" summary="Done">
-      <option name="closed" value="true" />
-      <created>1707142192325</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1707142192325</updated>
-    </task>
     <task id="LOCAL-00061" summary="Done">
       <option name="closed" value="true" />
       <created>1707147656402</created>
@@ -441,7 +436,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707297426027</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Done">
+      <option name="closed" value="true" />
+      <created>1707313012494</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1707313012495</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
