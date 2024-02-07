@@ -34,6 +34,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: SizedBox(
               height: 80,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
 
                   // Back Button
@@ -50,7 +51,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   // Edit Profile Text
                   const Padding(
-                    padding: EdgeInsets.only(top: 40,left: 88),
+                    padding: EdgeInsets.only(top: 40),
                     child: Text(
                       'Edit Profile',
                       style: TextStyle(
@@ -62,6 +63,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
 
                   // Edit Button Have to be removed
+                  Padding(
+                    padding: const EdgeInsets.only(top: 40, right: 20),
+                    child: IconButton(
+                      icon: const Icon(
+                        Icons.power_settings_new_rounded,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
 
                 ],
               ),
