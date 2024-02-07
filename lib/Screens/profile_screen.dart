@@ -70,6 +70,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
 
+          // Edit Profile Text and The Profile Picture and The edit button
           Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -126,13 +127,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
           ),
-          // Image Edit Button
-
-
-
-          //person image will be displayed here
-
-
+          
         ],
       ),
     );
@@ -163,7 +158,7 @@ class CardHolder extends StatelessWidget {
           const Card(),
           CardHolder1(email: email,about: about),
           Padding(
-            padding: const EdgeInsets.only(top: 20.0),
+            padding: const EdgeInsets.only(top: 30.0),
             child: Center(
               child: SizedBox(
                 child: ElevatedButton(
@@ -190,24 +185,32 @@ class Card extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: <Widget>[
 
-        SizedBox(
-          height: 70,
-        ),
-        Text(
-          'Aniketh Pratihar',
-          style: TextStyle(
-            color: titleColor,
-            fontSize: 20,
-            fontWeight: FontWeight.w700
-          ),
-        ),
-        SizedBox(
-          height: 10,
+        const SizedBox(
+          height: 65,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(width: 65,),
+            const Text(
+              'Aniketh Pratihar',
+              style: TextStyle(
+                color: titleColor,
+                fontSize: 20,
+                fontWeight: FontWeight.w700
+              ),
+            ),
+            const SizedBox(width: 15,),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.edit_note_rounded))
+          ],
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        const Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
@@ -238,7 +241,7 @@ class CardHolder1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 57.0,left: 15.0,right: 15.0),
+      padding: const EdgeInsets.only(top: 30.0,left: 15.0,right: 15.0),
       child: Column(
         children: [
           Container(
@@ -258,11 +261,9 @@ class CardHolder1 extends StatelessWidget {
               title: const Text("Email"),
               subtitle: Text(email),
               leading: const Icon(Icons.email),
-              trailing: Icon(Icons.arrow_forward, color: Colors.grey.shade400),
-              tileColor: Colors.white,
             ),
           ),
-          const SizedBox(height: 34,),
+          const SizedBox(height: 15,),
           Container(
             decoration: BoxDecoration(
                 color: Colors.white,
@@ -279,7 +280,7 @@ class CardHolder1 extends StatelessWidget {
             child: ListTile(
               title: const Text("About"),
               subtitle: Text(about),
-              leading: const Icon(Icons.email),
+              leading: const Icon(CupertinoIcons.refresh_circled_solid),
               trailing: Icon(Icons.arrow_forward, color: Colors.grey.shade400),
               tileColor: Colors.white,
             ),
