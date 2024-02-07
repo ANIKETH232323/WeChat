@@ -26,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
 
-          // Top App bar back button and edit button
+          // Top App bar back button and Edit Profile Text
           Positioned(
             top: 0,
             right: 0,
@@ -34,7 +34,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: SizedBox(
               height: 80,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
 
                   // Back Button
@@ -51,7 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   // Edit Profile Text
                   const Padding(
-                    padding: EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40,left: 88),
                     child: Text(
                       'Edit Profile',
                       style: TextStyle(
@@ -63,29 +62,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
 
                   // Edit Button Have to be removed
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40, right: 20),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.edit,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
+
                 ],
               ),
             ),
           ),
 
+          CardHolder(about: widget.chatUserModel.about,email: widget.chatUserModel.email),
 
-          const CardHolder(),
+
+          //person image will be displayed here
           Positioned(
             top: 135,
-            left: 145,
+            left: 120,
             child: Container(
-              height: 130,
-              width: 130,
+              height: 120,
+              width: 120,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
                   color: Colors.green,
@@ -94,8 +86,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: const Icon(CupertinoIcons.person_alt_circle),
             ),
           ),
-          const CardHolder1(),
-          const CardHolder2()
+
+          // Image Edit Button
+          Padding(
+            padding: const EdgeInsets.only(top: 200,left: 210),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: kPrimaryColor,
+                borderRadius: BorderRadius.circular(25)
+              ),
+              child: IconButton(
+                icon: const Icon(
+                  Icons.edit,
+                  color: Colors.white,
+                ),
+                onPressed: () {},
+              ),
+            ),
+          ),
+
+
+
+          //
+          // CardHolder1(email: widget.chatUserModel.email),
+          // CardHolder2(about: widget.chatUserModel.about,)
 
         ],
       ),
@@ -104,12 +118,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
 }
 
 class CardHolder extends StatelessWidget {
-  const CardHolder({super.key});
+  final String about;
+  final String email;
+  const CardHolder({super.key, required this.about, required this.email});
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 200, right: 20, left: 20),
-      height: 170,
+      margin: const EdgeInsets.only(top: 200, right: 15, left: 15),
+      height: 450,
       width: 400,
       decoration: BoxDecoration(
           color: Colors.white,
@@ -120,7 +136,29 @@ class CardHolder extends StatelessWidget {
                 blurRadius: 20,
                 spreadRadius: 10),
           ]),
-      child: const Card(),
+      child: Column(
+        children: [
+          const Card(),
+          CardHolder1(email: email,about: about),
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0,right: 15,left: 15),
+            child: Center(
+              child: SizedBox(
+                child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      padding: const EdgeInsets.all(15),
+                    ),
+                    child: const Text('Edit Profile')
+                ),),
+            ),
+          ),
+          // Card1(email: email),
+          // Card2(about: about)
+        ],
+      ),
     );
   }
 }
@@ -169,84 +207,125 @@ class Card extends StatelessWidget {
 }
 
 
-
+// For Email Card Field and about card field
 class CardHolder1 extends StatelessWidget {
-  const CardHolder1({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 500, right: 20, left: 20),
-      height: 80,
-      width: 400,
-      decoration: const BoxDecoration(
-          color: Colors.black12,
-          borderRadius: BorderRadius.all(Radius.circular(10)),),
-      child: const Padding(
-        padding: EdgeInsets.all(17.0),
-        child: Card1(),
-      ),
-    );
-  }
-}
+  final String email;
+  final String about;
+  const CardHolder1({super.key, required this.email, required this.about});
 
-class Card1 extends StatelessWidget {
-  const Card1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(children: [
-      Text(
-        'Email - ',
-        style: TextStyle( fontSize: 20,fontWeight: FontWeight.w700),
-      ),
-
-      Text(
-        'xyz@gmail.com',
-        style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),
-      ),
-    ],);
-  }
-}
-
-
-
-class CardHolder2 extends StatelessWidget {
-  const CardHolder2({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 98.0),
-      child: Container(
-        margin: const EdgeInsets.only(top: 500, right: 20, left: 20),
-        height: 80,
-        width: 400,
-        decoration: const BoxDecoration(
-          color: Colors.black12,
-          borderRadius: BorderRadius.all(Radius.circular(10)),),
-        child: const Padding(
-          padding: EdgeInsets.all(17.0),
-          child: Card2(),
-        ),
+      padding: const EdgeInsets.only(top: 57.0,left: 15.0,right: 15.0),
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                      offset: const Offset(0, 5),
+                      color: Colors.grey.withOpacity(.2),
+                      spreadRadius: 2,
+                      blurRadius: 10
+                  )
+                ]
+            ),
+            child: ListTile(
+              title: const Text("Email"),
+              subtitle: Text(email),
+              leading: const Icon(Icons.email),
+              trailing: Icon(Icons.arrow_forward, color: Colors.grey.shade400),
+              tileColor: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 34,),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                      offset: const Offset(0, 5),
+                      color: Colors.grey.withOpacity(.2),
+                      spreadRadius: 2,
+                      blurRadius: 10
+                  )
+                ]
+            ),
+            child: ListTile(
+              title: const Text("About"),
+              subtitle: Text(about),
+              leading: const Icon(Icons.email),
+              trailing: Icon(Icons.arrow_forward, color: Colors.grey.shade400),
+              tileColor: Colors.white,
+            ),
+          ),
+        ],
       ),
     );
   }
 }
 
-class Card2 extends StatelessWidget {
-  const Card2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(children: [
-      Text(
-        'About - ',
-        style: TextStyle( fontSize: 20,fontWeight: FontWeight.w700),
-      ),
-
-      Text(
-        'Hello',
-        style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),
-      ),
-    ],);
-  }
-}
+// class Card1 extends StatelessWidget {
+//   final String  email;
+//   const Card1({super.key, required this.email});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(children: [
+//
+//       const Text(
+//         'Email - ',
+//         style: TextStyle( fontSize: 15,fontWeight: FontWeight.w700),
+//       ),
+//
+//       Text(email,
+//         style: const TextStyle(fontSize: 15,fontWeight: FontWeight.w700),
+//       ),
+//     ],);
+//   }
+// }
+//
+//
+//
+// // For about Card Field
+// class CardHolder2 extends StatelessWidget {
+//   final String about;
+//   const CardHolder2({super.key,required this.about});
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       margin: const EdgeInsets.only(top: 12, right: 20, left: 20),
+//       height: 80,
+//       width: 400,
+//       decoration: const BoxDecoration(
+//         color: Colors.black12,
+//         borderRadius: BorderRadius.all(Radius.circular(10)),),
+//       child: Padding(
+//         padding: const EdgeInsets.all(17.0),
+//         child: Card2(about: about),
+//       ),
+//     );
+//   }
+// }
+//
+// class Card2 extends StatelessWidget {
+//   final String about;
+//   const Card2({super.key,required this.about});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(children: [
+//       const Text(
+//         'About - ',
+//         style: TextStyle( fontSize: 20,fontWeight: FontWeight.w700),
+//       ),
+//
+//       Text(about,
+//         style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w700),
+//       ),
+//     ],);
+//   }
+// }

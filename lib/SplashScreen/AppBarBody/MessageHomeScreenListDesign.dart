@@ -29,7 +29,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
                       height: 40,
                       width: 40,
                       imageUrl: widget.userModel.image,
-                      placeholder: (context, url) => CircularProgressIndicator(),
+                      placeholder: (context, url) => const CircularProgressIndicator(),
                       errorWidget: (context, url, error) => const Icon(Icons.error),
                     ),
                   ),
