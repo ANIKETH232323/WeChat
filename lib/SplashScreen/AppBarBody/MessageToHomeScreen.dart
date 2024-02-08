@@ -1,4 +1,6 @@
 
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wechat/Api/Api.dart';
@@ -26,6 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
   List<ChatUserModel> list = [];
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Api.getSelfInfo();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: buildAppBar(),
@@ -44,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
       body: StreamBuilder(
-        stream: Api.firestore.collection('user').snapshots(), //the user name should be same as firestore  database collection check that again
+        stream: Api.getAllUser(), //the user name should be same as firestore  database collection check that again
         builder: (context, snapshot) {
 
           switch(snapshot.connectionState){
@@ -109,20 +118,21 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: (){}, icon: const Icon(Icons.search)),
         IconButton(
             onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen(chatUserModel: list[0]),));
-            },icon: Icon(Icons.person_2_rounded),
-            // icon: ClipRRect(
-            //   borderRadius: BorderRadius.circular(100),
-            //   child: CachedNetworkImage(
-            //     width: 25,
-            //     height: 25,
-            //     fit: BoxFit.cover,
-            //     imageUrl: widget.chatUserModel.image,
-            //     errorWidget: (context, url, error) =>
-            //     const CircleAvatar(
-            //         child: Icon(CupertinoIcons.person)),
-            //   ),
-            // ),
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen(chatUserModel: Api.me),));
+            },
+          icon: const Icon(Icons.person_2_rounded),
+          //   icon: ClipRRect(
+          //     borderRadius: BorderRadius.circular(100),
+          //     child: CachedNetworkImage(
+          //       width: 25,
+          //       height: 25,
+          //       fit: BoxFit.cover,
+          //       imageUrl: Api.me.image,
+          //       errorWidget: (context, url, error) =>
+          //       const CircleAvatar(
+          //           child: Icon(CupertinoIcons.person)),
+          //     ),
+          //   ),
         )
       ],
     );

@@ -34,11 +34,11 @@ class _LoginPage1State  extends State<LoginPage1>{
         log('\nuser:${user.additionalUserInfo}');
 
         if(await Api.checkUser()){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>HomeScreen() ));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
         }
         else{
           await Api.createUser().then((value) {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>HomeScreen() ));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomeScreen() ));
         });
       }
 

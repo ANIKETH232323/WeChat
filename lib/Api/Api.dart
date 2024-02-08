@@ -7,6 +7,9 @@ class Api{
   // for Authentication
   static FirebaseAuth auth = FirebaseAuth.instance;
 
+  // for storing self information
+  static late ChatUserModel me;
+
 
   //For Accessing Firestore cloud database
   static FirebaseFirestore firestore = FirebaseFirestore.instance;
@@ -32,6 +35,25 @@ class Api{
         lastActive: time, email: auth.currentUser!.email.toString(), pushToken: "");
 
     return await firestore.collection('user').doc(auth.currentUser!.uid).set(chatUser.toJson());
+  }
+
+
+  // getting all user from fire store data base showing in home screen
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getAllUser(){
+    return firestore.collection('user').where('id',isNotEqualTo: user1.uid).snapshots();
+  }
+
+
+  //for getting current user info
+  static Future<void> getSelfInfo() async{
+     await firestore.collection('user').doc(user1.uid).get().then((value) async {
+       if(value.exists){
+         me = ChatUserModel.fromJson(value.data()!);
+       }
+       else{
+         await createUser().then((value) => getSelfInfo());
+       }
+     },);
   }
 
 }
