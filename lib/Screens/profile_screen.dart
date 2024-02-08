@@ -1,6 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/chatUserModel.dart';
+import 'package:wechat/Screens/LoginDetails/LoginScreen1.dart';
+import 'package:wechat/dialoge_box/snackBar.dart';
 import '../Themes/constants.dart';
 
 
@@ -60,7 +65,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Icons.power_settings_new_rounded,
                       color: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      SnackBar1.showProgressBar(context);
+                      await Api.auth.signOut().then((value) async {
+                        await GoogleSignIn().signOut().then((value) {
+                          Navigator.pop(context);
+                          Navigator.pop(context);
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginPage1(),));
+                        },);
+                      },);
+
+                    },
                   ),
                 ),
 
@@ -91,15 +106,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                 Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 145,
                       width: 145,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          color: Colors.yellow,
-                          border: Border.all(
-                              color: Colors.blueAccent.withOpacity(.2), width: 1)),
-                      child: const Icon(CupertinoIcons.person_alt_circle),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: CachedNetworkImage(
+                          width: 25,
+                          height: 25,
+                          fit: BoxFit.cover,
+                          imageUrl: widget.chatUserModel.image,
+                          errorWidget: (context, url, error) =>
+                          const CircleAvatar(
+                              child: Icon(CupertinoIcons.person)),
+                        ),
+                      ),
                     ),
 
                     Positioned(

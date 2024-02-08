@@ -1,7 +1,7 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 
-class SnackBar1 {
+class SnackBar1{
 
   static void showSnackBar(BuildContext context, String msg) {
     final Snackbar01 = SnackBar(
@@ -25,9 +25,9 @@ class SnackBar1 {
         SnackBar(content: Text(msg)) as SnackBar);
   }
 
-    static void showProgressBar(BuildContext context){
+  static void showProgressBar(BuildContext context){
       showDialog(
           context: context,
           builder: (_)=> const Center(child: CircularProgressIndicator()));
-    }
+  }
 }
