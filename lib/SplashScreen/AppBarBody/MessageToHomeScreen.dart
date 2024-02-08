@@ -14,11 +14,14 @@ import '../../Model/chatUserModel.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
 
   List<ChatUserModel> list = [];
 
@@ -107,7 +110,20 @@ class _HomeScreenState extends State<HomeScreen> {
         IconButton(
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen(chatUserModel: list[0]),));
-            }, icon: const Icon(Icons.account_circle))
+            },icon: Icon(Icons.person_2_rounded),
+            // icon: ClipRRect(
+            //   borderRadius: BorderRadius.circular(100),
+            //   child: CachedNetworkImage(
+            //     width: 25,
+            //     height: 25,
+            //     fit: BoxFit.cover,
+            //     imageUrl: widget.chatUserModel.image,
+            //     errorWidget: (context, url, error) =>
+            //     const CircleAvatar(
+            //         child: Icon(CupertinoIcons.person)),
+            //   ),
+            // ),
+        )
       ],
     );
   }

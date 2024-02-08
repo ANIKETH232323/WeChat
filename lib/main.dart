@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       // onGenerateRoute: (Settings) => generateRoutes(Settings),
-      home: SplashScreen()
+      home: const SplashScreen()
     );
   }
 }
