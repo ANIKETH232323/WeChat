@@ -56,4 +56,13 @@ class Api{
      },);
   }
 
+
+  // for updating  user info
+  static Future<void> UpdateProfileName() async{
+     await firestore.collection('user').doc(user1.uid).update({
+       'name': me.name,
+       'about': me.about,
+     });
+  }
+
 }
