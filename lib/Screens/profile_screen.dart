@@ -29,8 +29,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           key: _formkey,
           child: Stack(
             children: <Widget>[
-
-
               // Top App bar Green
               Container(
                 height: 300,
@@ -54,11 +52,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-
                       // No 1 - Some Space
                       Column(
                         children: <Widget>[
-
                           // Some Space
                           const SizedBox(
                             height: 65,
@@ -193,7 +189,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     _formkey.currentState!.save();
                                     Api.UpdateProfileName().then(
                                       (value) {
-                                        SnackBar1.showFloatingSnackBar(context, "Profile Updated Successfully");
+                                        SnackBar1.showFloatingSnackBar(context,
+                                            "Profile Updated Successfully");
                                       },
                                     );
                                   }
@@ -233,7 +230,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           color: Colors.white,
                         ),
                         onPressed: () {
-                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
+                          Navigator.pushReplacement(context,MaterialPageRoute(builder: (_) => const HomeScreen(),));
                         },
                       ),
                     ),
@@ -339,291 +336,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
-
-// class CardHolder extends StatelessWidget {
-//   final String about;
-//   final String email;
-//   final String name;
-//   final GlobalKey<FormState> key1;
-//   const CardHolder(
-//       {super.key,
-//       required this.about,
-//       required this.email,
-//       required this.name, required this.key1,
-//       });
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       margin: const EdgeInsets.only(top: 200, right: 15, left: 15),
-//       height: 450,
-//       width: 450,
-//       decoration: BoxDecoration(
-//           color: Colors.white,
-//           borderRadius: const BorderRadius.all(Radius.circular(10)),
-//           boxShadow: [
-//             BoxShadow(
-//                 color: titleColor.withOpacity(.1),
-//                 blurRadius: 20,
-//                 spreadRadius: 10),
-//           ]),
-//       child: SingleChildScrollView(
-//         child: Column(
-//           children: [
-//             Card(name1: name, l: key1,),
-//             CardHolder1(email: email, about: about),
-//             Padding(
-//               padding: const EdgeInsets.only(top: 30.0),
-//               child: Center(
-//                 child: SizedBox(
-//                   child: ElevatedButton(
-//                       onPressed: () {},
-//                       style: ElevatedButton.styleFrom(
-//                         backgroundColor: Colors.blue,
-//                         shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(10)),
-//                         padding: const EdgeInsets.all(15),
-//                       ),
-//                       child: const Text('Update Profile')),
-//                 ),
-//               ),
-//             ),
-//             // Card1(email: email),
-//             // Card2(about: about)
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-//
-// class Card extends StatelessWidget {
-//   final String name1;
-//   final GlobalKey<FormState> l;
-//   Card({super.key, required this.name1, required this.l});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       children: <Widget>[
-//         const SizedBox(
-//           height: 65,
-//         ),
-//         Form(
-//           key: l,
-//           child: Row(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               const SizedBox(
-//                 width: 65,
-//               ),
-//               const Text(
-//                 'Aniketh Pratihar',
-//                 style: TextStyle(
-//                     color: titleColor, fontSize: 20, fontWeight: FontWeight.w700),
-//               ),
-//               const SizedBox(
-//                 width: 15,
-//               ),
-//               IconButton(
-//                   onPressed: () {
-//                     showModalBottomSheet(
-//                         shape: const RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.vertical(
-//                                 top: Radius.circular(25.0))),
-//                         context: context,
-//                         isScrollControlled: true,
-//                         builder: (context) => Padding(
-//                               padding: EdgeInsets.only(
-//                                   top: 20,
-//                                   right: 20,
-//                                   left: 20,
-//                                   bottom:
-//                                       MediaQuery.of(context).viewInsets.bottom),
-//                               child: Column(
-//                                 crossAxisAlignment: CrossAxisAlignment.start,
-//                                 mainAxisSize: MainAxisSize.min,
-//                                 children: [
-//                                   const SizedBox(height: 8.0),
-//                                   TextFormField(
-//                                     autofocus: true,
-//                                     initialValue: name1,
-//                                     onSaved: (newValue) =>
-//                                         Api.me.name = newValue ?? '',
-//                                     validator: (value) =>
-//                                         value != null && value.isNotEmpty
-//                                             ? null
-//                                             : 'Required Field',
-//                                   ),
-//                                   const SizedBox(height: 20),
-//
-//                                   Center(
-//                                     child: SizedBox(
-//                                         height: 50.0,
-//                                         child: ElevatedButton(
-//                                             child: const Text("Update"),
-//                                             onPressed: () {
-//                                               if(l.currentState!.validate()) {
-//                                                 l.currentState!.save();
-//
-//                                                 Navigator.pop(context);
-//                                               };
-//
-//                                               Api.UpdateName();
-//
-//                                             }
-//
-//                                         )),
-//                                   ),
-//
-//                                   SizedBox(height: 20),
-//
-//                                 ],
-//                               ),
-//                             ));
-//                   },
-//                   icon: const Icon(Icons.edit_note_rounded))
-//             ],
-//           ),
-//         ),
-//         const SizedBox(
-//           height: 10,
-//         ),
-//         const Row(
-//           mainAxisSize: MainAxisSize.min,
-//           children: <Widget>[
-//             Text(
-//               'Joined On 02.02.2024',
-//               style: TextStyle(color: textColor, fontSize: 15),
-//             ),
-//             SizedBox(
-//               width: 5,
-//             ),
-//             Text(
-//               'at 8.45 PM',
-//               style: TextStyle(color: textColor, fontSize: 15),
-//             ),
-//           ],
-//         ),
-//       ],
-//     );
-//   }
-// }
-//
-// // For Email Card Field and about card field
-// class CardHolder1 extends StatelessWidget {
-//   final String email;
-//   final String about;
-//   const CardHolder1({super.key, required this.email, required this.about});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.only(top: 30.0, left: 15.0, right: 15.0),
-//       child: Column(
-//         children: [
-//           Container(
-//             decoration: BoxDecoration(
-//                 color: Colors.white,
-//                 borderRadius: BorderRadius.circular(10),
-//                 boxShadow: [
-//                   BoxShadow(
-//                       offset: const Offset(0, 5),
-//                       color: Colors.grey.withOpacity(.2),
-//                       spreadRadius: 2,
-//                       blurRadius: 10)
-//                 ]),
-//             child: ListTile(
-//               title: const Text("Email"),
-//               subtitle: Text(email),
-//               leading: const Icon(Icons.email),
-//             ),
-//           ),
-//           const SizedBox(
-//             height: 15,
-//           ),
-//           Container(
-//             decoration: BoxDecoration(
-//                 color: Colors.white,
-//                 borderRadius: BorderRadius.circular(10),
-//                 boxShadow: [
-//                   BoxShadow(
-//                       offset: const Offset(0, 5),
-//                       color: Colors.grey.withOpacity(.2),
-//                       spreadRadius: 2,
-//                       blurRadius: 10)
-//                 ]),
-//             child: ListTile(
-//               title: const Text("About"),
-//               subtitle: Text(about),
-//               leading: const Icon(CupertinoIcons.refresh_circled_solid),
-//               trailing: Icon(Icons.arrow_forward, color: Colors.grey.shade400),
-//               tileColor: Colors.white,
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-// class Card1 extends StatelessWidget {
-//   final String  email;
-//   const Card1({super.key, required this.email});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(children: [
-//
-//       const Text(
-//         'Email - ',
-//         style: TextStyle( fontSize: 15,fontWeight: FontWeight.w700),
-//       ),
-//
-//       Text(email,
-//         style: const TextStyle(fontSize: 15,fontWeight: FontWeight.w700),
-//       ),
-//     ],);
-//   }
-// }
-//
-//
-//
-// // For about Card Field
-// class CardHolder2 extends StatelessWidget {
-//   final String about;
-//   const CardHolder2({super.key,required this.about});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       margin: const EdgeInsets.only(top: 12, right: 20, left: 20),
-//       height: 80,
-//       width: 400,
-//       decoration: const BoxDecoration(
-//         color: Colors.black12,
-//         borderRadius: BorderRadius.all(Radius.circular(10)),),
-//       child: Padding(
-//         padding: const EdgeInsets.all(17.0),
-//         child: Card2(about: about),
-//       ),
-//     );
-//   }
-// }
-//
-// class Card2 extends StatelessWidget {
-//   final String about;
-//   const Card2({super.key,required this.about});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(children: [
-//       const Text(
-//         'About - ',
-//         style: TextStyle( fontSize: 20,fontWeight: FontWeight.w700),
-//       ),
-//
-//       Text(about,
-//         style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w700),
-//       ),
-//     ],);
-//   }
-// }

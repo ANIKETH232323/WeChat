@@ -1,6 +1,5 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -71,22 +70,7 @@ class _LoginPage1State  extends State<LoginPage1>{
     catch(e){
       
       log('The error is $e');
-      final Snackbar = SnackBar(
-        elevation: 0,
-        padding: EdgeInsets.all(45),
-        behavior: SnackBarBehavior.floating,
-        backgroundColor: Colors.transparent,
-        content: SizedBox(
-          height: 85,
-          child: AwesomeSnackbarContent(
-              title: "Congratulations",
-              message: "Sign-In Complete",
-              contentType: ContentType.success),
-        ),
-      );
-      ScaffoldMessenger.of(context)
-        ..hideCurrentSnackBar()
-        ..showSnackBar(Snackbar);
+      SnackBar1.showFloatingSnackBar(context, "Successfull");
       return null;
     }
   }
