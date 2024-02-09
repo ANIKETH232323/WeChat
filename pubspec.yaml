@@ -45,6 +45,12 @@ dependencies:
   # For showing network image_picker:
   cached_network_image: ^3.3.1
 
+  # search box
+  animation_search_bar: ^0.0.10
+  flutter_material_search_bar: ^1.0.1
+
+  animated_search_bar: ^2.7.1
+
 
 
 dev_dependencies:
