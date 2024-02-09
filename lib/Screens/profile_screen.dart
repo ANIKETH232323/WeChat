@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +5,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/chatUserModel.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen1.dart';
+import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 import 'package:wechat/dialoge_box/snackBar.dart';
 import '../Themes/constants.dart';
 
@@ -21,8 +20,6 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   final _formkey = GlobalKey<FormState>();
 
-
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -32,15 +29,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
           key: _formkey,
           child: Stack(
             children: <Widget>[
+
+
               // Top App bar Green
               Container(
                 height: 300,
                 decoration: const BoxDecoration(color: kPrimaryColor),
               ),
 
-
               // The Whole Card Box
-
               Container(
                 margin: const EdgeInsets.only(top: 200, right: 15, left: 15),
                 height: 450,
@@ -57,40 +54,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      // No 1
+
+                      // No 1 - Some Space
                       Column(
                         children: <Widget>[
+
+                          // Some Space
                           const SizedBox(
                             height: 65,
                           ),
 
-                          // Name And Edit Button For Text
-                          const SizedBox(
-                            width: 65,
-                          ),
-
-                          // Log in User Name
+                          // Log in User Name and Text Form Field
                           SizedBox(
-                            width: 200,
+                            width: 250,
+                            // Text Form FIeld
                             child: TextFormField(
-                              initialValue: widget
-                                  .chatUserModel.name,
-                              style:const TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 20
-                              ) ,
-                              onSaved: (newValue) => Api
-                                  .me
-                                  .name = newValue ?? '',
+                              initialValue: widget.chatUserModel.name,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w700, fontSize: 20),
+                              onSaved: (newValue) =>
+                                  Api.me.name = newValue ?? '',
                               validator: (value) =>
-                              value != null &&
-                                  value.isNotEmpty
-                                  ? null
-                                  : 'Required Field',
+                                  value != null && value.isNotEmpty
+                                      ? null
+                                      : 'Required Field',
                               textAlign: TextAlign.center,
                               decoration: const InputDecoration(
-                                  border: InputBorder.none
-                              ),
+                                  border: InputBorder.none),
                             ),
                           ),
 
@@ -105,14 +95,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             children: <Widget>[
                               Text(
                                 'Joined On 02.02.2024',
-                                style: TextStyle(color: textColor, fontSize: 15),
+                                style:
+                                    TextStyle(color: textColor, fontSize: 15),
                               ),
                               SizedBox(
                                 width: 5,
                               ),
                               Text(
                                 'at 8.45 PM',
-                                style: TextStyle(color: textColor, fontSize: 15),
+                                style:
+                                    TextStyle(color: textColor, fontSize: 15),
                               ),
                             ],
                           ),
@@ -125,7 +117,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             top: 30.0, left: 15.0, right: 15.0),
                         child: Column(
                           children: [
-
                             // Email Box
                             Container(
                               decoration: BoxDecoration(
@@ -168,25 +159,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   height: 25,
                                   child: TextFormField(
                                     initialValue: widget.chatUserModel.about,
-                                    style:const TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                    ) ,
-                                    enableInteractiveSelection: false,
-
-                                    onSaved: (newValue) => Api
-                                        .me
-                                        .about = newValue ?? '',
-                                    validator: (value) =>
-                                    value != null &&
-                                        value.isNotEmpty
-                                        ? null
-                                        : 'Required Field',
-                                    decoration: const InputDecoration(
-                                        border: InputBorder.none
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.w700,
                                     ),
+                                    enableInteractiveSelection: false,
+                                    onSaved: (newValue) =>
+                                        Api.me.about = newValue ?? '',
+                                    validator: (value) =>
+                                        value != null && value.isNotEmpty
+                                            ? null
+                                            : 'Required Field',
+                                    decoration: const InputDecoration(
+                                        border: InputBorder.none),
                                   ),
                                 ),
-                                leading: const Icon(CupertinoIcons.refresh_circled_solid),
+                                leading: const Icon(
+                                    CupertinoIcons.refresh_circled_solid),
                                 tileColor: Colors.white,
                               ),
                             ),
@@ -201,14 +189,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           child: SizedBox(
                             child: ElevatedButton(
                                 onPressed: () {
-
-                                      if (_formkey.currentState!.validate()) {
-                                        _formkey.currentState!.save();
-                                        Api.UpdateProfileName().then((value) {
-                                          SnackBar1.showSnackBar(context, "Profile Updated Successfully");
-                                        },);
-                                      }
-
+                                  if (_formkey.currentState!.validate()) {
+                                    _formkey.currentState!.save();
+                                    Api.UpdateProfileName().then(
+                                      (value) {
+                                        SnackBar1.showFloatingSnackBar(context, "Profile Updated Successfully");
+                                      },
+                                    );
+                                  }
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.blue,
@@ -238,13 +226,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: <Widget>[
                     // Back Button
                     Padding(
-                      padding: const EdgeInsets.only(top: 40, left: 20),
+                      padding: const EdgeInsets.only(top: 40, left: 5),
                       child: IconButton(
                         icon: const Icon(
                           Icons.arrow_back_ios_new,
                           color: Colors.white,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
+                        },
                       ),
                     ),
 
@@ -267,7 +257,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => const LoginPage1(),
+                                        builder: (context) =>
+                                            const LoginPage1(),
                                       ));
                                 },
                               );
@@ -325,12 +316,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           left: 95,
                           child: Container(
                             decoration: BoxDecoration(
-                                color: Colors.red,
+                                color: Colors.grey,
                                 borderRadius: BorderRadius.circular(25)),
                             child: IconButton(
                               icon: const Icon(
                                 Icons.edit,
-                                color: Colors.blue,
+                                color: Colors.black,
                               ),
                               onPressed: () {},
                             ),
@@ -347,7 +338,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-
 }
 
 // class CardHolder extends StatelessWidget {

@@ -1,6 +1,3 @@
-
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wechat/Api/Api.dart';
@@ -36,57 +33,59 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: buildAppBar(),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 20.0,right: 10),
-        child: Stack(
-          children: [
-            Align(
-                alignment: Alignment.bottomRight,
-                child: FloatingActionButton(onPressed: (){},
-                  backgroundColor: kPrimaryColor,
-                  child:const Icon(Icons.person_add_alt_1_sharp) ,
-                )),
-          ],
+    return  ScaffoldMessenger(
+      child: Scaffold(
+        appBar: buildAppBar(),
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(bottom: 20.0,right: 10),
+          child: Stack(
+            children: [
+              Align(
+                  alignment: Alignment.bottomRight,
+                  child: FloatingActionButton(onPressed: (){},
+                    backgroundColor: kPrimaryColor,
+                    child:const Icon(Icons.person_add_alt_1_sharp) ,
+                  )),
+            ],
+          ),
         ),
-      ),
-
-      body: StreamBuilder(
-        stream: Api.getAllUser(), //the user name should be same as firestore  database collection check that again
-        builder: (context, snapshot) {
-
-          switch(snapshot.connectionState){
-
-            case ConnectionState.waiting:
-            case ConnectionState.none:
-                    return const Center(child: CircularProgressIndicator());
-
-            case ConnectionState.active:
-            case ConnectionState.done:
-              if(snapshot.hasData){
-              final data = snapshot.data?.docs;
-              list = data?.map((e) => ChatUserModel.fromJson(e.data())).toList() ??[];
+      
+        body: StreamBuilder(
+          stream: Api.getAllUser(), //the user name should be same as firestore  database collection check that again
+          builder: (context, snapshot) {
+      
+            switch(snapshot.connectionState){
+      
+              case ConnectionState.waiting:
+              case ConnectionState.none:
+                      return const Center(child: CircularProgressIndicator());
+      
+              case ConnectionState.active:
+              case ConnectionState.done:
+                if(snapshot.hasData){
+                final data = snapshot.data?.docs;
+                list = data?.map((e) => ChatUserModel.fromJson(e.data())).toList() ??[];
+              }
+                if(list.isNotEmpty){
+                  return ListView.builder(
+                    padding: const EdgeInsets.only(top: 15),
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: list.length,
+                    itemBuilder: (context, index) {
+                      return HomeListDesign(userModel: list[index],);
+                    },
+                  );
+                }
+                else{
+                  return const Center(child: Text('No Connection Found',style: TextStyle(fontSize: 20
+                  ),));
+                }
+      
             }
-              if(list.isNotEmpty){
-                return ListView.builder(
-                  padding: const EdgeInsets.only(top: 15),
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: list.length,
-                  itemBuilder: (context, index) {
-                    return HomeListDesign(userModel: list[index],);
-                  },
-                );
-              }
-              else{
-                return const Center(child: Text('No Connection Found',style: TextStyle(fontSize: 20
-                ),));
-              }
-
-          }
-
-        },
-      )
+      
+          },
+        )
+      ),
     );
   }
 

@@ -1,28 +1,24 @@
-import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 
 class SnackBar1{
 
-  static void showSnackBar(BuildContext context, String msg) {
-    final Snackbar01 = SnackBar(
-      elevation: 0,
-      padding: EdgeInsets.all(45),
-      behavior: SnackBarBehavior.floating,
-      backgroundColor: Colors.transparent,
-      content: SizedBox(
-        height: 85,
-        child: AwesomeSnackbarContent(
-            title: "Congratulations",
-            message: "Sign-In Complete",
-            contentType: ContentType.success),
-      ),
-    );
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(Snackbar01);
+  static void showFloatingSnackBar(BuildContext context, String msg) {
 
-    ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(msg)) as SnackBar);
+    final snackBar = SnackBar(
+        content: Row(
+          children: [
+            const Icon(Icons.person_2_rounded),
+            const SizedBox(width: 15,),
+            Center(child: Text(msg,textAlign: TextAlign.center,)),
+          ],
+        ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+      width: 260,
+      dismissDirection: DismissDirection.up,
+      behavior: SnackBarBehavior.floating,
+    );
+
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
   static void showProgressBar(BuildContext context){
