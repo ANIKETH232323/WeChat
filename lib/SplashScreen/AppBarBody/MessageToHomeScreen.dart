@@ -172,48 +172,4 @@ class _HomeScreenState extends State<HomeScreen> {
           )),
     );
   }
-
-  // AppBar buildAppBar() {
-  //   return AppBar(
-  //               automaticallyImplyLeading: false,
-  //               toolbarHeight: 100,
-  //               systemOverlayStyle: const SystemUiOverlayStyle(statusBarColor: kPrimaryColor),
-  //               backgroundColor: kPrimaryColor,
-  //               title: AnimatedSearchBar(
-  //                 label: "WeChat",
-  //                 labelStyle: const TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
-  //                 searchDecoration: const InputDecoration(
-  //                   hintText: "Search Name",
-  //                   border: InputBorder.none,
-  //                   alignLabelWithHint: true,
-  //                 ),
-  //                 onChanged: (value) {},
-  //               ),
-  //               bottom: const PreferredSize(
-  //                   preferredSize: Size.fromHeight(15.0),
-  //                   child: Column(
-  //                     children: [
-  //                       Padding(
-  //                         padding: EdgeInsets.only(left: 14, bottom: 8),
-  //                         child: BodyAppBar(),
-  //                       )
-  //                     ],
-  //                   )),
-  //               actions: [
-  //                 // IconButton(onPressed: () {
-  //                 //   _controller.toggleSearchBar();
-  //                 // }, icon: const Icon(Icons.search)),
-  //                 IconButton(
-  //                   onPressed: () {
-  //                     Navigator.push(
-  //                         context,
-  //                         MaterialPageRoute(
-  //                           builder: (context) => ProfileScreen(chatUserModel: Api.me),
-  //                         ));
-  //                   },
-  //                   icon: const Icon(Icons.person_2_rounded),
-  //                 )
-  //               ],
-  //             );
-  // }
 }

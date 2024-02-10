@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done" />
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Api/Api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/Api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -345,14 +351,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00082" summary="Done">
-      <option name="closed" value="true" />
-      <created>1707462903627</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1707462903628</updated>
-    </task>
     <task id="LOCAL-00083" summary="Done">
       <option name="closed" value="true" />
       <created>1707465333223</created>
@@ -441,7 +439,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707553937438</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Done">
+      <option name="closed" value="true" />
+      <created>1707569498946</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1707569498946</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="ToolWindowManager">

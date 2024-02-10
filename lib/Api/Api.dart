@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -15,8 +17,15 @@ class Api{
   //For Accessing Firestore cloud database
   static FirebaseFirestore firestore = FirebaseFirestore.instance;
 
+  // For Accessing FireBase Cloud Database
+
+  static FirebaseStorage storage = FirebaseStorage.instance;
+
   // For not repeating the same code
   static User get user1 => auth.currentUser!;
+
+
+
 
   // for checking if user exist or not
   static Future<bool> checkUser() async{
@@ -67,8 +76,20 @@ class Api{
   }
 
 
-  // For Accessing FireBase Cloud Database
+  // for updating  user info
+  static Future<void> updateProfilePicture(File file) async{
 
-  static FirebaseStorage storage = FirebaseStorage.instance;
+    final ext = file.path.split(".").last;
+    final ref = storage.ref().child('profile_picture/${user1.uid}.$ext');
+
+    ref.putFile(file,SettableMetadata(contentType: 'image/$ext')).then((p0) {
+    },);
+    me.image = await ref.getDownloadURL();
+    await firestore.collection('user').doc(user1.uid).update({'image':me.image});
+
+  }
+
+
+
 
 }
