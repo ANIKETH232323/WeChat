@@ -320,7 +320,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Icons.edit,
                                 color: Colors.black,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                _showBottomsheet();
+                              },
                             ),
                           ),
                         ),
@@ -333,6 +335,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  void _showBottomsheet(){
+    showModalBottomSheet(
+        context: context,
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(35),topRight: Radius.circular(35))),
+        builder: (_) {
+
+          return ListView(
+            shrinkWrap: true,
+            padding: const EdgeInsets.only(bottom: 65),
+            children: [
+              const Padding(padding: EdgeInsets.only(top: 15)),
+              const Text("Pick Profile Picture",textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 22.0),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: const CircleBorder(),
+                          fixedSize: const Size(130, 145)),
+                      onPressed: (){}, child: Image.asset('images/photo.png')),
+                ),
+                const SizedBox(width: 32),
+                Padding(
+                  padding: const EdgeInsets.only(top: 22.0),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: const CircleBorder(),
+                          fixedSize: const Size(130, 145)),
+                      onPressed: (){}, child: Image.asset('images/camera.png')),
+                ),
+              ],)
+            ],
+          );
+        },
     );
   }
 }
