@@ -20,7 +20,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
       padding: const EdgeInsets.symmetric(horizontal: 19,vertical: 5),
       child: InkWell(
         onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalMessageScreen(),));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalMessageScreen(chatUserModel: widget.userModel),));
         },
         child: Column(
           children: [

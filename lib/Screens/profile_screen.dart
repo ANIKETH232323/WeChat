@@ -8,7 +8,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/chatUserModel.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen1.dart';
-import 'package:wechat/SplashScreen/AppBarBody/MessageToHomeScreen.dart';
 import 'package:wechat/dialoge_box/snackBar.dart';
 import '../Themes/constants.dart';
 
@@ -234,7 +233,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           color: Colors.white,
                         ),
                         onPressed: () {
-                          Navigator.pushReplacement(context,MaterialPageRoute(builder: (_) => const HomeScreen(),));
+                          Navigator.pop(context);
                         },
                       ),
                     ),
