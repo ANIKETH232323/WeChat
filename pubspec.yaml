@@ -31,6 +31,7 @@ dependencies:
   firebase_core: ^2.21.0 # For integration App to FireBase
   firebase_auth: ^4.12.1 # For Handling Firebase Authentication
   cloud_firestore: ^4.14.0 # For data base integration
+  firebase_storage: ^11.6.5 # For Accessing firebase storage for uploading files like images etc
 
   # Google Sign-In Plugins
   google_sign_in: ^6.1.5 # For handling Google Sign In
@@ -44,6 +45,10 @@ dependencies:
 
   # For showing network image_picker:
   cached_network_image: ^3.3.1
+
+  #image picker
+  image_picker: ^1.0.7
+
 
 
 

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:wechat/Model/chatUserModel.dart';
 
 class Api{
@@ -64,5 +65,10 @@ class Api{
        'about': me.about,
      });
   }
+
+
+  // For Accessing FireBase Cloud Database
+
+  static FirebaseStorage storage = FirebaseStorage.instance;
 
 }

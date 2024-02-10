@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/chatUserModel.dart';
 import 'package:wechat/Screens/LoginDetails/LoginScreen1.dart';
@@ -19,6 +22,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final _formkey = GlobalKey<FormState>();
+  String? image1;
 
   @override
   Widget build(BuildContext context) {
@@ -292,6 +296,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                     Stack(
                       children: [
+
+                        image1 != null ?
+
+
+                        // Local Image
+                        SizedBox(
+                          height: 145,
+                          width: 145,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.file(
+                              File(image1!),
+                              width: 25,
+                              height: 25,
+                              fit: BoxFit.cover,
+
+                            ),
+                          ),
+                        ) :
+
+                        // Firebase Defult Profile Picture
                         SizedBox(
                           height: 145,
                           width: 145,
@@ -303,8 +328,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               fit: BoxFit.cover,
                               imageUrl: widget.chatUserModel.image,
                               errorWidget: (context, url, error) =>
-                                  const CircleAvatar(
-                                      child: Icon(CupertinoIcons.person)),
+                              const CircleAvatar(
+                                  child: Icon(CupertinoIcons.person)),
                             ),
                           ),
                         ),
@@ -338,6 +363,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
+
+
+
+
+
   void _showBottomsheet(){
     showModalBottomSheet(
         context: context,
@@ -353,6 +383,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
+                  // From Image Pick From Gallery
                 Padding(
                   padding: const EdgeInsets.only(top: 22.0),
                   child: ElevatedButton(
@@ -360,7 +392,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           backgroundColor: Colors.white,
                           shape: const CircleBorder(),
                           fixedSize: const Size(130, 145)),
-                      onPressed: (){}, child: Image.asset('images/photo.png')),
+                      onPressed: () async {
+
+                        final ImagePicker picker = ImagePicker();
+                        // Pick an image.
+                        final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+
+                        if(image != null){
+
+                          setState(() {
+                            image1 = image.path;
+                          });
+                          Navigator.pop(context);
+                        }
+
+
+                      }, child: Image.asset('images/photo.png')),
                 ),
                 const SizedBox(width: 32),
                 Padding(
@@ -370,7 +417,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           backgroundColor: Colors.white,
                           shape: const CircleBorder(),
                           fixedSize: const Size(130, 145)),
-                      onPressed: (){}, child: Image.asset('images/camera.png')),
+                      onPressed: () async {
+
+                        final ImagePicker picker = ImagePicker();
+                        // Pick an image.
+                        final XFile? image = await picker.pickImage(source: ImageSource.camera);
+
+                        if(image != null){
+
+                          setState(() {
+                            image1 = image.path;
+                          });
+                          Navigator.pop(context);
+                        }
+
+                      }, child: Image.asset('images/camera.png')),
                 ),
               ],)
             ],
