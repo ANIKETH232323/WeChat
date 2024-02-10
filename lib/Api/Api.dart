@@ -92,4 +92,16 @@ class Api{
 
 
 
+
+  /// *********************************** Personal Chat Screen Related Api **********************************  ////
+
+  /// for getting all users from firebase database
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getAllMessages(){
+    return firestore.collection('messages').snapshots();
+  }
+
+
+
+
+
 }

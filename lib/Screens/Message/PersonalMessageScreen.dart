@@ -44,8 +44,8 @@ class _PersonalMessageScreenState extends State<PersonalMessageScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-            Text(widget.chatUserModel.name,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
-            Text("Online",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
+            Text(widget.chatUserModel.name,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+            const Text("Online",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
           ],)
         ],
       ),
