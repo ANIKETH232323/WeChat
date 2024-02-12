@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
-      <change afterPath="$PROJECT_DIR$/lib/timeFormater.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Api/Api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/Api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/MessageModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/MessageModel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/MessageSendingFIeld.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/MessageSendingFIeld.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/PersonalMessageScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/PersonalMessageScreen.dart" afterDir="false" />
-    </list>
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -353,14 +345,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00088" summary="Done">
-      <option name="closed" value="true" />
-      <created>1707506825993</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1707506825993</updated>
-    </task>
     <task id="LOCAL-00089" summary="Done">
       <option name="closed" value="true" />
       <created>1707542262999</created>
@@ -449,7 +433,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707726370961</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Done">
+      <option name="closed" value="true" />
+      <created>1707732616625</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1707732616625</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="ToolWindowManager">
