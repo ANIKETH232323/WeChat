@@ -104,8 +104,8 @@ class Api {
           : '${id}_${user1.uid}';
 
   /// for getting all users from firebase database
-  static Stream<QuerySnapshot<Map<String, dynamic>>> getAllMessages(
-      ChatUserModel user) {
+
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getAllMessages(ChatUserModel user) {
     return firestore
         .collection('chats/${getConversationID(user.id)}/messages')
         .snapshots();
@@ -133,12 +133,20 @@ class Api {
     // );
   }
 
-  // Update Message red status
-
+  // Update Message read status
   static Future<void> updateMessageReadStatus(MessageModel messageModel) async {
     firestore
         .collection('chats/${getConversationID(messageModel.fromid)}/messages/')
         .doc(messageModel.sent)
         .update({'read': DateTime.now().millisecondsSinceEpoch.toString()});
+  }
+
+  // get only last message of a specific chat
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getLastMessage(ChatUserModel user) {
+    return firestore
+        .collection('chats/${getConversationID(user.id)}/messages')
+        .orderBy('sent',descending: true)
+        .limit(1)
+        .snapshots();
   }
 }

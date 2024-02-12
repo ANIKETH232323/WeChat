@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done" />
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Api/Api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/Api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/timeFormater.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/timeFormater.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -345,14 +350,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00089" summary="Done">
-      <option name="closed" value="true" />
-      <created>1707542262999</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1707542263001</updated>
-    </task>
     <task id="LOCAL-00090" summary="Done">
       <option name="closed" value="true" />
       <created>1707548117636</created>
@@ -441,7 +438,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707732616625</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Done">
+      <option name="closed" value="true" />
+      <created>1707742704982</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1707742704983</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -476,6 +481,11 @@
           <url>file://$PROJECT_DIR$/lib/Screens/profile_screen.dart</url>
           <line>91</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart</url>
+          <line>84</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
