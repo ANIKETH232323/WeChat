@@ -1,7 +1,5 @@
-import 'dart:convert';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:wechat/Model/chatUserModel.dart';
 import 'package:wechat/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart';
 import 'package:wechat/Themes/constants.dart';
 
@@ -9,7 +7,8 @@ import '../../Api/Api.dart';
 import '../../Model/MessageModel.dart';
 
 class ButtomBodyText extends StatefulWidget {
-  const ButtomBodyText({super.key});
+  final ChatUserModel chatUserModel;
+  const ButtomBodyText({super.key, required this.chatUserModel});
 
   @override
   State<ButtomBodyText> createState() => _ButtomBodyTextState();
@@ -18,56 +17,33 @@ class ButtomBodyText extends StatefulWidget {
 class _ButtomBodyTextState extends State<ButtomBodyText> {
   List<MessageModel> list = [];
 
+  //for handling message text changes
+  final TextEditingController textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // Expanded(
-        //   child: ListView.builder(
-        //     itemBuilder: (context, index) =>
-        //         const P2PUI(),
-        //   ),
-        // ),
-
-        // Have to check
-        // const Expanded(child: P2PUI()),
-
         Expanded(
           child: StreamBuilder(
             stream: Api
-                .getAllMessages(), //the user name should be same as firestore  database collection check that again
+                .getAllMessages(widget.chatUserModel), //the user name should be same as firestore  database collection check that again
             builder: (context, snapshot) {
               switch (snapshot.connectionState) {
                 case ConnectionState.waiting:
                 case ConnectionState.none:
-                  return const Center(child: CircularProgressIndicator());
+                  return const SizedBox();
 
                 case ConnectionState.active:
                 case ConnectionState.done:
                   // if (snapshot.hasData) {
                   final data = snapshot.data?.docs;
-                  log("Data:${jsonEncode(data![0].data())}");
-                  //   // list = data
-                  //   //     ?.map((e) => ChatUserModel.fromJson(e.data()))
-                  //   //     .toList() ??
-                  //   //     [];
-                  //
-                  // }
+                  // log("Data:${jsonEncode(data![0].data())}");
+                    list = data
+                        ?.map((e) => MessageModel.fromJson(e.data()))
+                        .toList() ??
+                        [];
 
-                  list.add(MessageModel(
-                      msg: "Hello",
-                      read: '',
-                      told: "No",
-                      type: Type.text,
-                      fromid: Api.user1.uid,
-                      sent: "12.05 PM"));
-                  list.add(MessageModel(
-                      msg: "Hell",
-                      read: '',
-                      told: Api.user1.uid,
-                      type: Type.text,
-                      fromid: 'xyz',
-                      sent: "01.05 PM"));
                   if (list.isNotEmpty) {
                     return ListView.builder(
                       padding: const EdgeInsets.only(top: 15),
@@ -106,24 +82,25 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                   decoration: BoxDecoration(
                       color: kPrimaryColor.withOpacity(0.05),
                       borderRadius: BorderRadius.circular(50)),
-                  child: const Row(children: [
-                    Padding(
+                  child: Row(children: [
+                    const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Icon(Icons.sentiment_satisfied_alt_outlined,
                           color: kPrimaryColor),
                     ),
                     Expanded(
                         child: TextField(
+                          controller: textEditingController,
                       maxLines: null,
                       keyboardType: TextInputType.multiline,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           hintText: "Type Message", border: InputBorder.none),
                     )),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Icon(Icons.photo, color: kPrimaryColor),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(15.0),
                       child: Icon(Icons.camera_alt, color: kPrimaryColor),
                     ),
@@ -134,7 +111,12 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
               Padding(
                 padding: const EdgeInsets.only(right: 10),
                 child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if(textEditingController.text.isNotEmpty){
+                        Api.sendMessage(widget.chatUserModel, textEditingController.text);
+                        textEditingController.text = '';
+                      }
+                    },
                     backgroundColor: kPrimaryColor,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25)),

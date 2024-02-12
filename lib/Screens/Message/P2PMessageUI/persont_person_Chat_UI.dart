@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/MessageModel.dart';
+import 'package:wechat/timeFormater.dart';
 
 import '../../../Themes/constants.dart';
 
 class P2PUI extends StatefulWidget {
-  P2PUI({super.key, required this.messageModel});
+  const P2PUI({super.key, required this.messageModel});
 
   final MessageModel messageModel;
 
@@ -21,6 +22,11 @@ class _P2PUIState extends State<P2PUI> {
   }
 
   Widget SenderMessageUI(){
+
+    bool hello = false;
+    if(widget.messageModel.read.isNotEmpty){
+      hello = true;
+    }
     return  Padding(
       padding: const EdgeInsets.only(top: 15,left: 15,right: 85),
       child: Column(
@@ -48,10 +54,14 @@ class _P2PUIState extends State<P2PUI> {
                         Container(
                             margin: const EdgeInsets.only(top: 5,left: 5),
                             child: Text(widget.messageModel.msg)),
-                        Container(
+
+                        // if(widget.messageModel.read.isNotEmpty)
+                        hello ? Container(
                           margin: const EdgeInsets.only(top: 16,left: 75),
-                          child: const Icon(Icons.done_all_rounded,size:15,),
-                        )
+                          child:  const Icon(Icons.done_all_rounded,size:15,),
+                        ) : Container(
+                        margin: const EdgeInsets.only(top: 16,left: 75),
+                        child:  Icon(Icons.done,size:15,)),
                       ],
                     ),
                   ),
@@ -61,8 +71,8 @@ class _P2PUIState extends State<P2PUI> {
 
             ],),
           Padding(
-            padding: EdgeInsets.only(left: 55),
-            child: Text(widget.messageModel.sent),
+            padding: const EdgeInsets.only(left: 55),
+            child: Text(TimeFormat.getFormatedTime(context: context, time: widget.messageModel.sent)),
           )
         ],
       ),
@@ -70,6 +80,12 @@ class _P2PUIState extends State<P2PUI> {
   }
 
   Widget ReceiverMessageUI(){
+
+    // update last receiver message if sender and receiver both are different
+    if(widget.messageModel.read.isEmpty){
+      Api.updateMessageReadStatus(widget.messageModel);
+    }
+
     return Padding(
       padding: const EdgeInsets.only(top: 15,left: 85,right: 15),
       child: Column(
@@ -96,12 +112,16 @@ class _P2PUIState extends State<P2PUI> {
                 ),
               ),
               const SizedBox(width: 10,),
+
+              // person icon
               const CircleAvatar(child:Icon(CupertinoIcons.person) ),
 
             ],),
+
+          //date time
           Padding(
-            padding: EdgeInsets.only(right: 50),
-            child: Text(widget.messageModel.sent),
+            padding: const EdgeInsets.only(right: 50),
+            child: Text(TimeFormat.getFormatedTime(context: context, time: widget.messageModel.sent)),
           )
         ],
       ),

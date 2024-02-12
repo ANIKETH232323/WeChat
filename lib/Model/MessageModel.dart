@@ -28,7 +28,7 @@ class MessageModel {
     data['msg'] = msg;
     data['read'] = read;
     data['told'] = told;
-    data['type'] = type;
+    data['type'] = type.name;
     data['fromid'] = fromid;
     data['sent'] = sent;
     return data;

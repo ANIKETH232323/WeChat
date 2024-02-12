@@ -18,7 +18,7 @@ class _PersonalMessageScreenState extends State<PersonalMessageScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: buildAppBar(),
-      body: const ButtomBodyText(),
+      body: ButtomBodyText(chatUserModel:widget.chatUserModel),
     );
   }
 
