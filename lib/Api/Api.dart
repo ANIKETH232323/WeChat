@@ -1,7 +1,9 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:wechat/Model/MessageModel.dart';
 import 'package:wechat/Model/chatUserModel.dart';
@@ -17,8 +19,10 @@ class Api {
   static FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   // For Accessing FireBase Cloud Database
-
   static FirebaseStorage storage = FirebaseStorage.instance;
+
+  // For accessing Firebase messaging push notification
+  static FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
 
   // For not repeating the same code
   static User get user1 => auth.currentUser!;
@@ -63,6 +67,8 @@ class Api {
       (value) async {
         if (value.exists) {
           me = ChatUserModel.fromJson(value.data()!);
+          getFireBaseMessageToken();
+          Api.updateActiveStatus(true);
         } else {
           await createUser().then((value) => getSelfInfo());
         }
@@ -177,8 +183,26 @@ class Api {
     firestore
         .collection('user')
         .doc(user1.uid)
-        .update({'isOnline':online,'last_active':DateTime.now().millisecondsSinceEpoch.toString()});
+        .update({'isOnline':online,
+      'last_active':DateTime.now().millisecondsSinceEpoch.toString(),
+      'push_token' : me.pushToken
+        });
   }
+
+
+  // for getting firebase messaging token
+
+static Future<void> getFireBaseMessageToken() async{
+  await firebaseMessaging.requestPermission();
+
+  await firebaseMessaging.getToken().then((token){
+    if(token != null){
+      me.pushToken = token;
+      log("pushtoken: $token");
+    }
+  });
+}
+
 
 
 }

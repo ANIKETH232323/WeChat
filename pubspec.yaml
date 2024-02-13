@@ -32,6 +32,7 @@ dependencies:
   firebase_auth: ^4.12.1 # For Handling Firebase Authentication
   cloud_firestore: ^4.14.0 # For data base integration
   firebase_storage: ^11.6.5 # For Accessing firebase storage for uploading files like images etc
+  firebase_messaging: ^14.7.15 #fot Firebase Messaging and Push Notification
 
   # Google Sign-In Plugins
   google_sign_in: ^6.1.5 # For handling Google Sign In
