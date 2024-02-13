@@ -107,12 +107,12 @@ class Api {
 
   static Stream<QuerySnapshot<Map<String, dynamic>>> getAllMessages(ChatUserModel user) {
     return firestore
-        .collection('chats/${getConversationID(user.id)}/messages')
+        .collection('chats/${getConversationID(user.id)}/messages').orderBy('sent',descending: true)
         .snapshots();
   }
 
   // for sending message
-  static Future<void> sendMessage(ChatUserModel chatUser, String msg) async {
+  static Future<void> sendMessage(ChatUserModel chatUser, String msg,Type type) async {
     //message sending time (also used as id)
     final time = DateTime.now().millisecondsSinceEpoch.toString();
 
@@ -121,7 +121,7 @@ class Api {
         told: chatUser.id,
         msg: msg,
         read: '',
-        type: Type.text,
+        type: type,
         fromid: user1.uid,
         sent: time);
 
@@ -149,4 +149,19 @@ class Api {
         .limit(1)
         .snapshots();
   }
+
+
+  // send image to the user
+  static Future<void> sendImage(ChatUserModel chatUserModel, File file) async {
+    final ext = file.path.split(".").last;
+    final ref = storage.ref().child('send_images/${getConversationID(chatUserModel.id)}/${DateTime.now().millisecondsSinceEpoch}.$ext');
+
+    await ref.putFile(file, SettableMetadata(contentType: 'image/$ext')).then(
+          (p0) {},
+    );
+    final imageUr = await ref.getDownloadURL();
+    await sendMessage(chatUserModel, imageUr,Type.image);
+  }
+
+
 }

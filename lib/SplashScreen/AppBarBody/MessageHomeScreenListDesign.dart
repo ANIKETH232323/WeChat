@@ -83,7 +83,16 @@ class _HomeListDesignState extends State<HomeListDesign> {
                               const SizedBox(height: 10,),
                               Opacity(
                                   opacity: 0.64,
-                                  child: Text(messageModel != null ? messageModel!.msg : widget.userModel.about,maxLines: 1,overflow: TextOverflow.ellipsis,))
+                                  child: Text(
+                                    messageModel != null
+                                        ?
+                                        messageModel!.type == Type.image ?
+                                            'Photo' :
+                                    messageModel!.msg
+                                        :
+                                    widget.userModel.about
+                                    ,maxLines: 1,overflow: TextOverflow.ellipsis,)
+                              )
                             ],),
                         ),
                       ),

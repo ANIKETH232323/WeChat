@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wechat/Api/Api.dart';
@@ -27,6 +28,13 @@ class _P2PUIState extends State<P2PUI> {
     if(widget.messageModel.read.isNotEmpty){
       hello = true;
     }
+
+    bool imag = false;
+
+    if(widget.messageModel.type == Type.image){
+      imag = true;
+    }
+
     return  Padding(
       padding: const EdgeInsets.only(top: 15,left: 15,right: 85),
       child: Column(
@@ -53,14 +61,33 @@ class _P2PUIState extends State<P2PUI> {
                       children: [
                         Container(
                             margin: const EdgeInsets.only(top: 5,left: 5),
-                            child: Text(widget.messageModel.msg)),
+                            child: widget.messageModel.type == Type.text ?Text(widget.messageModel.msg)
+                                :
+                            Padding(
+                              padding: const EdgeInsets.only(right: 15.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: CachedNetworkImage(
+                                  width: 280,
+                                  height: 150,
+                                  fit: BoxFit.cover,
+                                  imageUrl: widget.messageModel.msg,
+                                  errorWidget: (context, url, error) =>
+                                  const CircleAvatar(
+                                      child: Icon(Icons.image_outlined)),
+                                ),
+                              ),
+                            ),
+                        ),
 
                         // if(widget.messageModel.read.isNotEmpty)
-                        hello ? Container(
-                          margin: const EdgeInsets.only(top: 16,left: 75),
+                        hello  ? Container(
+                          margin:  imag ? const EdgeInsets.only(top: 150,left: 230) : const EdgeInsets.only(top: 16,left: 75),
                           child:  const Icon(Icons.done_all_rounded,size:15,),
-                        ) : Container(
-                        margin: const EdgeInsets.only(top: 16,left: 75),
+                        )
+                        :
+                        Container(
+                        margin: imag ? const EdgeInsets.only(top: 150,left: 230) : const EdgeInsets.only(top: 16,left: 75),
                         child:  Icon(Icons.done,size:15,)),
                       ],
                     ),
@@ -107,7 +134,24 @@ class _P2PUIState extends State<P2PUI> {
                         )
                     ),
 
-                    child: Text(widget.messageModel.msg),
+                    child: widget.messageModel.type == Type.text ? Text(widget.messageModel.msg)
+                    :
+                    Padding(
+                      padding: const EdgeInsets.only(right: 15.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: CachedNetworkImage(
+                          width: 280,
+                          height: 150,
+                          fit: BoxFit.cover,
+                          imageUrl: widget.messageModel.msg,
+                          errorWidget: (context, url, error) =>
+                          const CircleAvatar(
+                              child: Icon(Icons.image_outlined)),
+                        ),
+                      ),
+                    )
+                    ,
                   ),
                 ),
               ),
