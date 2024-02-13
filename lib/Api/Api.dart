@@ -164,4 +164,21 @@ class Api {
   }
 
 
+  // Getting Specific user info
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getUserInfo(ChatUserModel user) {
+    return firestore
+        .collection('user')
+        .where('id',isEqualTo: user.id)
+        .snapshots();
+  }
+
+  // update last active and online time
+  static Future <void> updateActiveStatus(bool online) async {
+    firestore
+        .collection('user')
+        .doc(user1.uid)
+        .update({'isOnline':online,'last_active':DateTime.now().millisecondsSinceEpoch.toString()});
+  }
+
+
 }

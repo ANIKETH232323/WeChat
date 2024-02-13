@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/chatUserProfileScreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Api/Api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/Api.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Screens/Message/MessageSendingFIeld.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/MessageSendingFIeld.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/PersonalMessageScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/PersonalMessageScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/timeFormater.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/timeFormater.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,14 +353,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00094" summary="Done">
-      <option name="closed" value="true" />
-      <created>1707569498946</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1707569498946</updated>
-    </task>
     <task id="LOCAL-00095" summary="Done">
       <option name="closed" value="true" />
       <created>1707571566192</created>
@@ -452,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707746403442</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Done">
+      <option name="closed" value="true" />
+      <created>1707808919229</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1707808919229</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -497,6 +494,16 @@
           <url>file://$PROJECT_DIR$/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart</url>
           <line>88</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/Api/Api.dart</url>
+          <line>175</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/timeFormater.dart</url>
+          <line>11</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

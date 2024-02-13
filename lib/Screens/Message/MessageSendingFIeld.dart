@@ -127,9 +127,7 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                           controller: textEditingController,
                           maxLines: null,
                           onTap: () {
-                            setState(
-                              () => showemoji = !showemoji,
-                            );
+                            if(showemoji)setState(() => showemoji = !showemoji);
                           },
                           keyboardType: TextInputType.multiline,
                           decoration: const InputDecoration(
@@ -137,11 +135,11 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                               border: InputBorder.none),
                         )),
                         Padding(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: IconButton(
                             onPressed: () async {
                               final ImagePicker picker = ImagePicker();
-                              // Pick multiple  image. thats why using list
+                              // Pick multiple  image. that's why using list
                               final List<XFile> images = await picker.pickMultiImage();
 
                               for(var i in images){
@@ -149,10 +147,10 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                               }
 
                             },
-                              icon: Icon(Icons.photo, color: kPrimaryColor)),
+                              icon: const Icon(Icons.photo, color: kPrimaryColor)),
                         ),
                         Padding(
-                          padding: EdgeInsets.all(15.0),
+                          padding: const EdgeInsets.all(15.0),
                           child: IconButton(
                               onPressed: () async {
                                 final ImagePicker picker = ImagePicker();
@@ -160,11 +158,12 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                                 final XFile? image = await picker.pickImage(
                                     source: ImageSource.camera);
 
-                                if (image != null)
+                                if (image != null) {
                                   Api.sendImage(widget.chatUserModel,File(image.path));
+                                }
                               },
                               icon:
-                                  Icon(Icons.camera_alt, color: kPrimaryColor)
+                                  const Icon(Icons.camera_alt, color: kPrimaryColor)
                           ),
                         ),
                       ]),
@@ -203,7 +202,6 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                       verticalSpacing: 0,
                       horizontalSpacing: 0,
                       gridPadding: EdgeInsets.zero,
-                      initCategory: Category.RECENT,
                       bgColor: darkmode == true
                           ? kContentColorLightTheme
                           : Colors.white,
@@ -216,11 +214,6 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                       enableSkinTones: true,
                       recentTabBehavior: RecentTabBehavior.RECENT,
                       recentsLimit: 28,
-                      noRecents: const Text(
-                        'No Recents',
-                        style: TextStyle(fontSize: 20, color: Colors.black26),
-                        textAlign: TextAlign.center,
-                      ), // Needs to be const Widget
                       loadingIndicator:
                           const SizedBox.shrink(), // Needs to be const Widget
                       tabIndicatorAnimDuration: kTabScrollDuration,
@@ -229,48 +222,6 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                       checkPlatformCompatibility: true),
                 ),
               )
-
-            // if(showemoji == true)SizedBox(
-            //   height: 255,
-            //   child: EmojiPicker(
-            //     scrollController: FixedExtentScrollController(),
-            //     textEditingController: textEditingController, // pass here the same [TextEditingController] that is connected to your input field, usually a [TextFormField]
-            //     config: Config(
-            //       height: 256,
-            //       checkPlatformCompatibility: false,
-            //       emojiViewConfig: EmojiViewConfig(
-            //         // Issue: https://github.com/flutter/flutter/issues/28894
-            //         emojiSizeMax: 28 *
-            //             (foundation.defaultTargetPlatform == TargetPlatform.iOS
-            //                 ?  1.20
-            //                 :  1.0),
-            //       ),
-            //       swapCategoryAndBottomBar:  false,
-            //       skinToneConfig: const SkinToneConfig(),
-            //       categoryViewConfig: const CategoryViewConfig(),
-            //       bottomActionBarConfig: const BottomActionBarConfig(),
-            //       searchViewConfig: const SearchViewConfig(),
-            //     ),
-            //   ),
-            // )
-
-            // if(showemoji == true)
-
-            //   SizedBox(
-            //   height: 355,
-            //   child: EmojiPicker(
-            //     textEditingController: textEditingController,
-            //     config: const Config(
-            //       checkPlatformCompatibility: true,
-            //       height: 285,
-            //       swapCategoryAndBottomBar: true,
-            //       skinToneConfig: SkinToneConfig(),
-            //       categoryViewConfig: CategoryViewConfig(),
-            //       bottomActionBarConfig: BottomActionBarConfig(),
-            //       searchViewConfig: SearchViewConfig(),
-            //     ),
-            //   ),
-            // )
           ],
         ),
       ),
