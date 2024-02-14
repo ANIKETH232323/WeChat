@@ -215,7 +215,10 @@ static Future<void> sentPushNotification(ChatUserModel chatUserModel,String msg)
       "title": me.name, //our name should be send
       "body": msg,
       "android_channel_id": "chats"
-    }
+    },
+    "data": {
+      "some_data" : "User ID :${me.id}",
+    },
   };
   var response = await post(Uri.parse('https://fcm.googleapis.com/fcm/send'),
       headers: {

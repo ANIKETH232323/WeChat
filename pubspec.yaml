@@ -56,6 +56,9 @@ dependencies:
   # Rest Api HTTP Package
   http: ^1.2.0
 
+  # for creating notification channel
+  flutter_notification_channel: ^2.0.0
+
 
 
 
