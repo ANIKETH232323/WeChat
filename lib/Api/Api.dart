@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 
@@ -5,8 +6,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:http/http.dart';
 import 'package:wechat/Model/MessageModel.dart';
 import 'package:wechat/Model/chatUserModel.dart';
+import 'package:wechat/ignore_files.dart';
 
 class Api {
   // for Authentication
@@ -133,10 +136,9 @@ class Api {
 
     final ref = firestore
         .collection('chats/${getConversationID(chatUser.id)}/messages/');
-    await ref.doc(time).set(message.toJson());
-    //     .then((value) =>
-    //     sendPushNotification(chatUser, type == Type.text ? msg : 'image')
-    // );
+    await ref.doc(time).set(message.toJson())
+        .then((value) => sentPushNotification(chatUser, type == Type.text ? msg : 'image')
+    );
   }
 
   // Update Message read status
@@ -201,6 +203,28 @@ static Future<void> getFireBaseMessageToken() async{
       log("pushtoken: $token");
     }
   });
+}
+
+
+static Future<void> sentPushNotification(ChatUserModel chatUserModel,String msg) async{
+
+
+  final body = {
+    "to": chatUserModel.pushToken,
+    "notification": {
+      "title": me.name, //our name should be send
+      "body": msg,
+      "android_channel_id": "chats"
+    }
+  };
+  var response = await post(Uri.parse('https://fcm.googleapis.com/fcm/send'),
+      headers: {
+        HttpHeaders.contentTypeHeader: 'application/json',
+        HttpHeaders.authorizationHeader: serverKey
+      },
+      body: jsonEncode(body));
+  log('Response status: ${response.statusCode}');
+  log('Response body: ${response.body}');
 }
 
 

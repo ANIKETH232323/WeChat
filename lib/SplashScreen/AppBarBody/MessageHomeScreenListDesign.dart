@@ -5,6 +5,7 @@ import 'package:wechat/Model/MessageModel.dart';
 import 'package:wechat/Model/chatUserModel.dart';
 import 'package:wechat/Screens/Message/PersonalMessageScreen.dart';
 import 'package:wechat/Themes/constants.dart';
+import 'package:wechat/dialoge_box/profileDialoge.dart';
 import 'package:wechat/timeFormater.dart';
 
 class HomeListDesign extends StatefulWidget {
@@ -47,14 +48,19 @@ class _HomeListDesignState extends State<HomeListDesign> {
                     children: [
                       Stack(
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(25),
-                            child: CachedNetworkImage(
-                              height: 40,
-                              width: 40,
-                              imageUrl: widget.userModel.image,
-                              placeholder: (context, url) => const CircularProgressIndicator(),
-                              errorWidget: (context, url, error) => const Icon(Icons.error),
+                          InkWell(
+                            onTap: () {
+                              showDialog(context: context, builder: (context) => ProfileDialoge(chatUserModel: widget.userModel,));
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(25),
+                              child: CachedNetworkImage(
+                                height: 40,
+                                width: 40,
+                                imageUrl: widget.userModel.image,
+                                placeholder: (context, url) => const CircularProgressIndicator(),
+                                errorWidget: (context, url, error) => const Icon(Icons.error),
+                              ),
                             ),
                           ),
 

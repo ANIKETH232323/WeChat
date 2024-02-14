@@ -53,6 +53,9 @@ dependencies:
   # emoji picker keyboard
   emoji_picker_flutter: ^1.6.4
 
+  # Rest Api HTTP Package
+  http: ^1.2.0
+
 
 
 
