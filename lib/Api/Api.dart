@@ -231,5 +231,19 @@ static Future<void> sentPushNotification(ChatUserModel chatUserModel,String msg)
 }
 
 
+//Delete Message
+static Future<void> deleteMessage(MessageModel messageModel) async{
+
+  await firestore
+      .collection('chats/${getConversationID(messageModel.told)}/messages/')
+      .doc(messageModel.sent)
+      .delete();
+
+  if(messageModel.type == Type.image) {
+    await storage.refFromURL(messageModel.msg).delete();
+  }
+}
+
+
 
 }
