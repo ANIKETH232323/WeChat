@@ -21,7 +21,7 @@ dependencies:
   page_transition: ^2.1.0
 
   # Google Fonts To use over 900+ fonts from fonts.google.com
-  google_fonts: ^6.1.0
+  google_fonts: ^4.0.4
 
   # Riv animation in Splash Screen
   rive: ^0.12.2
@@ -54,10 +54,17 @@ dependencies:
   emoji_picker_flutter: ^1.6.4
 
   # Rest Api HTTP Package
-  http: ^1.2.0
+  http: ^0.13.3
 
   # for creating notification channel
   flutter_notification_channel: ^2.0.0
+
+  # for storing images and videos in gallery
+  gallery_saver: ^2.3.2
+
+  # Toast message
+  fluttertoast: ^8.2.4
+  toast: ^0.3.0
 
 
 

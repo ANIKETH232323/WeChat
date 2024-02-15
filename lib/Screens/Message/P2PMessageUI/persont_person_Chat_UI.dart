@@ -1,9 +1,13 @@
+import 'dart:developer';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gallery_saver/gallery_saver.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/MessageModel.dart';
+import 'package:wechat/dialoge_box/snackBar.dart';
 import 'package:wechat/timeFormater.dart';
 
 import '../../../Themes/constants.dart';
@@ -212,7 +216,21 @@ class _P2PUIState extends State<P2PUI> {
             ,)
                 :
             // Save Option For Image
-            OptionItem(icon: const Icon(Icons.download), iconName: 'Save Image', onTap: () {},),
+            OptionItem(icon: const Icon(Icons.download), iconName: 'Save Image', onTap: () async {
+
+              try{
+                await GallerySaver.saveImage(widget.messageModel.msg,albumName: "WeChat").then((success) {
+                  Navigator.pop(context);
+                  if(success != null && success) {
+                    SnackBar1.showFloatingSnackBar(context, "Image Saved");
+                  }
+                });
+              }
+              catch(e){
+                log("Error While Saving Image: $e");
+              }
+
+            },),
 
             //separator or divider
             if(isme)
@@ -224,7 +242,13 @@ class _P2PUIState extends State<P2PUI> {
 
             //Edit Option
             if(widget.messageModel.type == Type.text && isme)
-            OptionItem(icon: const Icon(Icons.edit_note_sharp), iconName: 'Edit Message', onTap: () {},),
+            OptionItem(icon: const Icon(Icons.edit_note_sharp), iconName: 'Edit Message', onTap: () {
+
+              Navigator.pop(context);
+              showMessageUpdateDialoge();
+
+
+            },),
 
             // Delete Option
             if(isme)
@@ -256,6 +280,67 @@ class _P2PUIState extends State<P2PUI> {
       },
     );
   }
+
+  void showMessageUpdateDialoge() {
+    String updatedMsg = widget.messageModel.msg;
+
+    showDialog(context: context, builder: (_)=>AlertDialog(
+      contentPadding: const EdgeInsets.only(
+          left: 24, right: 24, top: 20, bottom: 10),
+
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20)),
+
+      //title
+      title: const Row(
+        children: [
+          Icon(
+            Icons.message,
+            color: kPrimaryColor,
+            size: 28,
+          ),
+          Text(' Update Message')
+        ],
+      ),
+
+      //content
+      content: TextFormField(
+        initialValue: updatedMsg,
+        maxLines: null,
+        onChanged: (value) => updatedMsg = value,
+        decoration: InputDecoration(
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15))),
+      ),
+
+      //actions
+      actions: [
+        //cancel button
+        MaterialButton(
+            onPressed: () {
+              //hide alert dialog
+              Navigator.pop(context);
+            },
+            child: const Text(
+              'Cancel',
+              style: TextStyle(color: kPrimaryColor, fontSize: 16),
+            )),
+
+        //update button
+        MaterialButton(
+            onPressed: () {
+              //hide alert dialog
+              Navigator.pop(context);
+              Api.updateMessage(widget.messageModel, updatedMsg);
+            },
+            child: const Text(
+              'Update',
+              style: TextStyle(color: kPrimaryColor, fontSize: 16),
+            ))
+      ],
+    ));
+
+  }
 }
 
 class OptionItem extends StatelessWidget {
@@ -273,7 +358,7 @@ class OptionItem extends StatelessWidget {
         child: Row(
           children: [
             icon,
-            SizedBox(width: 20),
+            const SizedBox(width: 20),
             Flexible(child: Text(iconName,style: const TextStyle(fontSize: 20),))
           ],
         ),

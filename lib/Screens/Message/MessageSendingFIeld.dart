@@ -70,7 +70,7 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                       if (list.isNotEmpty) {
                         return ListView.builder(
                           padding: const EdgeInsets.only(top: 15),
-                          reverse:true,
+                          reverse: true,
                           physics: const BouncingScrollPhysics(),
                           itemCount: list.length,
                           itemBuilder: (context, index) {
@@ -90,7 +90,6 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                 },
               ),
             ),
-
             Container(
               padding: const EdgeInsets.symmetric(vertical: 10),
               decoration: BoxDecoration(
@@ -127,7 +126,8 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                           controller: textEditingController,
                           maxLines: null,
                           onTap: () {
-                            if(showemoji)setState(() => showemoji = !showemoji);
+                            if (showemoji)
+                              setState(() => showemoji = !showemoji);
                           },
                           keyboardType: TextInputType.multiline,
                           decoration: const InputDecoration(
@@ -137,17 +137,19 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: IconButton(
-                            onPressed: () async {
-                              final ImagePicker picker = ImagePicker();
-                              // Pick multiple  image. that's why using list
-                              final List<XFile> images = await picker.pickMultiImage();
+                              onPressed: () async {
+                                final ImagePicker picker = ImagePicker();
+                                // Pick multiple  image. that's why using list
+                                final List<XFile> images =
+                                    await picker.pickMultiImage();
 
-                              for(var i in images){
-                                Api.sendImage(widget.chatUserModel,File(i.path));
-                              }
-
-                            },
-                              icon: const Icon(Icons.photo, color: kPrimaryColor)),
+                                for (var i in images) {
+                                  Api.sendImage(
+                                      widget.chatUserModel, File(i.path));
+                                }
+                              },
+                              icon: const Icon(Icons.photo,
+                                  color: kPrimaryColor)),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(15.0),
@@ -159,12 +161,12 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                                     source: ImageSource.camera);
 
                                 if (image != null) {
-                                  Api.sendImage(widget.chatUserModel,File(image.path));
+                                  Api.sendImage(
+                                      widget.chatUserModel, File(image.path));
                                 }
                               },
-                              icon:
-                                  const Icon(Icons.camera_alt, color: kPrimaryColor)
-                          ),
+                              icon: const Icon(Icons.camera_alt,
+                                  color: kPrimaryColor)),
                         ),
                       ]),
                     ),
@@ -175,8 +177,14 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                     child: FloatingActionButton(
                         onPressed: () {
                           if (textEditingController.text.isNotEmpty) {
-                            Api.sendMessage(widget.chatUserModel,
-                                textEditingController.text, Type.text);
+                            if (list.isEmpty) {
+                              Api.sendFirstMessage(widget.chatUserModel,
+                                  textEditingController.text, Type.text);
+                            } else {
+                              Api.sendMessage(widget.chatUserModel,
+                                  textEditingController.text, Type.text);
+                            }
+
                             textEditingController.text = '';
                           }
                         },
@@ -190,7 +198,6 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                 ],
               ),
             ),
-
             if (showemoji)
               SizedBox(
                 height: 300,
