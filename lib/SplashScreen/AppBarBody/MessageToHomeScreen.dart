@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:toast/toast.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Screens/profile_screen.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
@@ -204,14 +203,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 );
             }
-            return const Center(child: CircularProgressIndicator());
           },
         ));
   }
 
   void addNewUserDialoge() {
     String email = '';
-
     showDialog(
         context: context,
         builder: (_) => AlertDialog(
