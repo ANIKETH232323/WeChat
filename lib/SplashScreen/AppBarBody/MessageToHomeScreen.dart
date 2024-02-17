@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 )
               : const Text("WeChat",
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700)),
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700,color: Colors.white)),
           bottom: PreferredSize(
               preferredSize: _isSearching
                   ? const Size.fromHeight(35.0)
@@ -145,6 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {
                       addNewUserDialoge();
                     },
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
                     backgroundColor: kPrimaryColor,
                     child: const Icon(Icons.person_add_alt_1_sharp),
                   )),

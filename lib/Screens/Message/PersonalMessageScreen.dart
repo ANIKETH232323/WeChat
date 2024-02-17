@@ -84,11 +84,13 @@ class _PersonalMessageScreenState extends State<PersonalMessageScreen> {
             );
           },
       ),
-      actions: [
-        IconButton(onPressed: (){}, icon:const Icon(Icons.local_phone_rounded)),
-        IconButton(onPressed: (){}, icon:const Icon(Icons.videocam)),
-        const SizedBox(width: 15,)
-      ],
+
+      // Will be implement later
+      // actions: [
+      //   IconButton(onPressed: (){}, icon:const Icon(Icons.local_phone_rounded)),
+      //   IconButton(onPressed: (){}, icon:const Icon(Icons.videocam)),
+      //   const SizedBox(width: 15,)
+      // ],
     );
   }
 }

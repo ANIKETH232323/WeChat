@@ -52,7 +52,8 @@ class _P2PUIState extends State<P2PUI> {
         children: [
           Row(
             children: [
-              const CircleAvatar(child: Icon(CupertinoIcons.person)),
+              // person icon  will be implement later
+              // const CircleAvatar(child: Icon(CupertinoIcons.person)),
               const SizedBox(
                 width: 10,
               ),
@@ -175,7 +176,7 @@ class _P2PUIState extends State<P2PUI> {
               ),
 
               // person icon
-              const CircleAvatar(child: Icon(CupertinoIcons.person)),
+              // const CircleAvatar(child: Icon(CupertinoIcons.person)),
             ],
           ),
 
