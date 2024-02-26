@@ -23,26 +23,26 @@ class _HomeListDesignState extends State<HomeListDesign> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 19,vertical: 5),
-      child: StreamBuilder(
-          stream: Api.getLastMessage(widget.userModel),
-          builder: (context, snapshot) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalMessageScreen(chatUserModel: widget.userModel),));
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(left: 15,right: 15),
+        child: StreamBuilder(
+            stream: Api.getLastMessage(widget.userModel),
+            builder: (context, snapshot) {
 
-            final data = snapshot.data?.docs;
-            final list = data
-                ?.map((e) => MessageModel.fromJson(e.data()))
-                .toList() ??
-                [];
-            if(list.isNotEmpty){
-              messageModel = list[0];
-            }
+              final data = snapshot.data?.docs;
+              final list = data
+                  ?.map((e) => MessageModel.fromJson(e.data()))
+                  .toList() ??
+                  [];
+              if(list.isNotEmpty){
+                messageModel = list[0];
+              }
 
-            return InkWell(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalMessageScreen(chatUserModel: widget.userModel),));
-              },
-              child: Column(
+              return Column(
                 children: [
                   Row(
                     children: [
@@ -123,11 +123,11 @@ class _HomeListDesignState extends State<HomeListDesign> {
                   ),
                   const Divider(indent: 5,thickness: 2,color: Colors.black38,)
                 ],
-              ),
-            );
-          },
+              );
+            },
 
-      )
+        )
+      ),
     );
   }
 }
