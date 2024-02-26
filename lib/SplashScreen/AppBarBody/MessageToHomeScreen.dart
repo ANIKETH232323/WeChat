@@ -263,21 +263,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         await Api.addChatUser(email).then(
                           (value) {
                             if (!value) {
-                              // Fluttertoast.showToast(msg: "User Does Not Exist",
-                              //     toastLength: Toast.LENGTH_SHORT,
-                              //     gravity: ToastGravity.CENTER,
-                              //     timeInSecForIosWeb: 1,
-                              //     backgroundColor: Colors.red,
-                              //     textColor: Colors.white,
-                              //     fontSize: 16.0
-                              // );
                               SnackBar1.showFloatingSnackBar(
                                   context, "No User Found");
                             }
                             else{
                               SnackBar1.showFloatingSnackBar(
                                   context, "User Added In Your List");
-                            };
+                            }
                           },
                         );
                       }
