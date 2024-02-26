@@ -211,34 +211,29 @@ class _HomeScreenState extends State<HomeScreen> {
     String email = '';
     showDialog(
         context: context,
-        builder: (_) => AlertDialog(
-              contentPadding: const EdgeInsets.only(
-                  left: 24, right: 24, top: 20, bottom: 10),
-
+        builder: (context) => AlertDialog(
+              // contentPadding: const EdgeInsets.only(
+              //     left: 24, right: 24, top: 20, bottom: 10),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
+                  borderRadius: BorderRadius.circular(12)),
 
               //title
-              title: const Row(
-                children: [
-                  Icon(
-                    Icons.person,
-                    color: kPrimaryColor,
-                    size: 28,
-                  ),
-                  Text('Add User')
-                ],
-              ),
-
+              title: const Text('Add User',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),),
+              insetPadding: EdgeInsets.zero,
               //content
-              content: TextFormField(
-                maxLines: null,
-                onChanged: (value) => email = value,
-                decoration: InputDecoration(
-                    hintText: 'Email-Id',
-                    prefixIcon: const Icon(Icons.email, color: kPrimaryColor),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15))),
+              content: Builder(
+                  builder: (context) {
+                    return SizedBox(
+                     width: 320,
+                      child: TextField(
+                        maxLines: null,
+                        onChanged: (value) => email = value,
+                        decoration: const InputDecoration(
+                          hintText: 'Email-Id',
+                        ),
+                      ),
+                    );
+                  },
               ),
 
               //actions
@@ -251,7 +246,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: const Text(
                       'Cancel',
-                      style: TextStyle(color: kPrimaryColor, fontSize: 16),
+                      style: TextStyle(color: text1Color, fontSize: 16),
                     )),
 
                 //update button
@@ -276,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: const Text(
                       'Add',
-                      style: TextStyle(color: kPrimaryColor, fontSize: 16),
+                      style: TextStyle(color: text1Color, fontSize: 16),
                     ))
               ],
             ));
