@@ -35,8 +35,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
         builder: (context, snapshot) {
           final data = snapshot.data?.docs;
           final list =
-              data?.map((e) => MessageModel.fromJson(e.data())).toList() ??
-                  [];
+              data?.map((e) => MessageModel.fromJson(e.data())).toList() ?? [];
           if (list.isNotEmpty) {
             messageModel = list[0];
           }
@@ -47,8 +46,8 @@ class _HomeListDesignState extends State<HomeListDesign> {
                   showDialog(
                       context: context,
                       builder: (context) => ProfileDialoge(
-                        chatUserModel: widget.userModel,
-                      ));
+                            chatUserModel: widget.userModel,
+                          ));
                 },
                 child: Stack(
                   children: [
@@ -59,9 +58,9 @@ class _HomeListDesignState extends State<HomeListDesign> {
                         width: 40,
                         imageUrl: widget.userModel.image,
                         placeholder: (context, url) =>
-                        const CircularProgressIndicator(),
+                            const CircularProgressIndicator(),
                         errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
+                            const Icon(Icons.error),
                       ),
                     ),
                     Positioned(
@@ -86,8 +85,8 @@ class _HomeListDesignState extends State<HomeListDesign> {
                   child: Text(
                     messageModel != null
                         ? messageModel!.type == Type.image
-                        ? 'Photo'
-                        : messageModel!.msg
+                            ? 'Photo'
+                            : messageModel!.msg
                         : widget.userModel.about,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -95,20 +94,16 @@ class _HomeListDesignState extends State<HomeListDesign> {
               trailing: messageModel == null
                   ? null
                   : messageModel!.read.isEmpty &&
-                  messageModel!.fromid != Api.user1.uid
-                  ? Container(
-                height: 15,
-                width: 15,
-                decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius:
-                    BorderRadius.circular(25)),
-              )
-                  : Text(TimeFormat.getLastMessFormTime(
-                  context: context,
-                  time: messageModel!.sent)
-              )
-          );
+                          messageModel!.fromid != Api.user1.uid
+                      ? Container(
+                          height: 15,
+                          width: 15,
+                          decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(25)),
+                        )
+                      : Text(TimeFormat.getLastMessFormTime(
+                          context: context, time: messageModel!.sent)));
         },
       ),
     );

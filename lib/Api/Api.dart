@@ -32,12 +32,8 @@ class Api {
 
   // for checking if user exist or not
   static Future<bool> checkUser() async {
-    return (await firestore.collection('user')
-        .doc(user1.uid)
-        .get())
-        .exists;
+    return (await firestore.collection('user').doc(user1.uid).get()).exists;
   }
-
 
   // for creating a new user or creating new use account
   static Future<void> createUser() async {
@@ -61,10 +57,11 @@ class Api {
   }
 
   // getting all user from fire store data base showing in home screen
-  static Stream<QuerySnapshot<Map<String, dynamic>>> getAllUser(List<String> userIds) {
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getAllUser(
+      List<String> userIds) {
     return firestore
         .collection('user')
-        .where('id', whereIn: userIds.isEmpty?['']:userIds)
+        .where('id', whereIn: userIds.isEmpty ? [''] : userIds)
         .snapshots();
   }
 
@@ -268,7 +265,6 @@ class Api {
           .doc(data.docs.first.id)
           .set({});
       return true;
-
     } else {
       return false;
     }
