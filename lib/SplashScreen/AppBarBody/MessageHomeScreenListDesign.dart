@@ -78,7 +78,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
               ),
               title: Text(
                 widget.userModel.name,
-                style: TextStyle(fontWeight: FontWeight.w500),
+                style: const TextStyle(fontWeight: FontWeight.w500),
               ),
               subtitle: Opacity(
                   opacity: 0.64,
