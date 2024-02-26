@@ -12,10 +12,8 @@ class SnackBar1{
             Center(child: Text(msg,textAlign: TextAlign.center,)),
           ],
         ),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-      width: 260,
       dismissDirection: DismissDirection.up,
-      behavior: SnackBarBehavior.floating,
+      behavior: SnackBarBehavior.fixed,
     );
 
     ScaffoldMessenger.of(context).showSnackBar(snackBar);

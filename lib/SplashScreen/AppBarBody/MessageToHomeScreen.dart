@@ -7,6 +7,7 @@ import 'package:wechat/Themes/constants.dart';
 import 'package:wechat/dialoge_box/snackBar.dart';
 
 import '../../Model/chatUserModel.dart';
+import '../../Screens/Message/PersonalMessageScreen.dart';
 
 // ***************************************Main Chats List will be done here******************************************
 
@@ -275,6 +276,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               SnackBar1.showFloatingSnackBar(
                                   context, "No User Found");
                             }
+                            else{
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalMessageScreen(chatUserModel: Api.me)),);
+                            };
                           },
                         );
                       }

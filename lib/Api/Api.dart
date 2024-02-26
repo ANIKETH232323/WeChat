@@ -268,6 +268,7 @@ class Api {
           .doc(data.docs.first.id)
           .set({});
       return true;
+
     } else {
       return false;
     }

@@ -23,6 +23,7 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,6 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;AnalyzeApkAction.lastApkPath&quot;: &quot;E:/Flutter Android Project&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;ScreenshotViewer.SavePath&quot;: &quot;D:/&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
@@ -56,11 +58,11 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Flutter SDK Files/flutter&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
@@ -346,14 +348,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00125" summary="Done">
-      <option name="closed" value="true" />
-      <created>1707983192289</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1707983192289</updated>
-    </task>
     <task id="LOCAL-00126" summary="Done">
       <option name="closed" value="true" />
       <created>1707983570692</created>
@@ -442,7 +436,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708269871117</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Done">
+      <option name="closed" value="true" />
+      <created>1708597184602</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1708597184602</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -495,17 +497,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart</url>
-          <line>143</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart</url>
-          <line>261</line>
+          <line>262</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart</url>
-          <line>210</line>
+          <line>211</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
