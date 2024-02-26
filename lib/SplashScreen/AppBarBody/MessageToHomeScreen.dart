@@ -82,7 +82,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 )
               : const Text("WeChat",
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700,color: Colors.white)),
+                  style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white)),
           bottom: PreferredSize(
               preferredSize: _isSearching
                   ? const Size.fromHeight(35.0)
@@ -144,7 +147,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {
                       addNewUserDialoge();
                     },
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25)),
                     backgroundColor: kPrimaryColor,
                     child: const Icon(Icons.person_add_alt_1_sharp),
                   )),
@@ -164,23 +168,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 return StreamBuilder(
                   stream: Api.getAllUser(snapshot.data?.docs
                           .map((e) => e.id)
-                          .toList() ?? []), //the user name should be same as firestore  database collection check that again
+                          .toList() ??
+                      []), //the user name should be same as firestore  database collection check that again
                   builder: (context, snapshot) {
                     switch (snapshot.connectionState) {
                       case ConnectionState.waiting:
                       case ConnectionState.none:
-
-
                       case ConnectionState.active:
                       case ConnectionState.done:
-                          final data = snapshot.data?.docs;
-                          list = data
-                                  ?.map((e) => ChatUserModel.fromJson(e.data()))
-                                  .toList() ??
-                              [];
+                        final data = snapshot.data?.docs;
+                        list = data
+                                ?.map((e) => ChatUserModel.fromJson(e.data()))
+                                .toList() ??
+                            [];
                         if (list.isNotEmpty) {
                           return ListView.builder(
-                            padding: const EdgeInsets.only(top: 15),
                             physics: const BouncingScrollPhysics(),
                             itemCount:
                                 _isSearching ? _searchList.length : list.length,
@@ -218,22 +220,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(12)),
 
               //title
-              title: const Text('Add User',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),),
+              title: const Text(
+                'Add User',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
               insetPadding: EdgeInsets.zero,
               //content
               content: Builder(
-                  builder: (context) {
-                    return SizedBox(
-                     width: 320,
-                      child: TextField(
-                        maxLines: null,
-                        onChanged: (value) => email = value,
-                        decoration: const InputDecoration(
-                          hintText: 'Email-Id',
-                        ),
+                builder: (context) {
+                  return SizedBox(
+                    width: 320,
+                    child: TextField(
+                      maxLines: null,
+                      canRequestFocus: true,
+                      onChanged: (value) => email = value,
+                      decoration: const InputDecoration(
+                        hintText: 'Email-Id',
                       ),
-                    );
-                  },
+                    ),
+                  );
+                },
               ),
 
               //actions
@@ -260,8 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             if (!value) {
                               SnackBar1.showFloatingSnackBar(
                                   context, "No User Found");
-                            }
-                            else{
+                            } else {
                               SnackBar1.showFloatingSnackBar(
                                   context, "User Added In Your List");
                             }
