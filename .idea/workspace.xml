@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Done">
+      <change afterPath="$PROJECT_DIR$/animation/loading.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animation/page_empty_dark.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animation/page_empty_light.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animation/page_search.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animation/page_search_light.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/SysSans-En-Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/SysSans-En-Regular.otf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +69,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Flutter SDK Files/flutter&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Music.apk&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -350,22 +359,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00136" summary="Done">
-      <option name="closed" value="true" />
-      <created>1708269871117</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1708269871117</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Done">
-      <option name="closed" value="true" />
-      <created>1708597184602</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1708597184602</updated>
-    </task>
     <task id="LOCAL-00138" summary="Done">
       <option name="closed" value="true" />
       <created>1708933072069</created>
@@ -446,7 +439,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708959027318</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Done">
+      <option name="closed" value="true" />
+      <created>1708959097339</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1708959097340</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Done">
+      <option name="closed" value="true" />
+      <created>1708959126748</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1708959126748</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="ToolWindowManager">

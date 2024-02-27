@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lottie/lottie.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Screens/profile_screen.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
@@ -196,10 +197,21 @@ class _HomeScreenState extends State<HomeScreen> {
                           );
                         } else {
                           return const Center(
-                              child: Text(
-                            'No Connection Found',
-                            style: TextStyle(fontSize: 20),
-                          ));
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                // Lottie.asset('animation/page_empty_dark.json',
+                                //     fit: BoxFit.cover,
+                                //     repeat: false,
+                                //     reverse: true),
+                                Text(
+                                  'No Connection Found',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ],
+                            ),
+                          );
                         }
                     }
                   },
