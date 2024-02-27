@@ -4,7 +4,6 @@ import 'package:lottie/lottie.dart';
 import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Screens/profile_screen.dart';
 import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
-import 'package:wechat/SplashScreen/AppBarBody/MessageHomeScreenListDesign.dart';
 import 'package:wechat/Themes/constants.dart';
 import 'package:wechat/dialoge_box/snackBar.dart';
 
