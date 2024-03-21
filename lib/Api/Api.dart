@@ -165,7 +165,7 @@ class Api {
   // send image to the user
   static Future<void> sendImage(ChatUserModel chatUserModel, File file) async {
     final ext = file.path.split(".").last;
-    final ref =  storage.ref().child(
+    final ref = storage.ref().child(
         'send_images/${getConversationID(chatUserModel.id)}/${DateTime.now().millisecondsSinceEpoch}.$ext');
 
     await ref.putFile(file, SettableMetadata(contentType: 'image/$ext')).then(
