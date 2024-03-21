@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="None">
-      <changelist_data name="Aniketh Pratihar" email="aniketh5660@gmail.com" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Api/Api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/Api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +73,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -379,22 +374,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00151" summary="Animated Json Files Added">
-      <option name="closed" value="true" />
-      <created>1709059636506</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1709059636506</updated>
-    </task>
-    <task id="LOCAL-00152" summary="Animated Json Files Added">
-      <option name="closed" value="true" />
-      <created>1709059656316</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1709059656316</updated>
-    </task>
     <task id="LOCAL-00153" summary="None">
       <option name="closed" value="true" />
       <created>1709060019589</created>
@@ -475,7 +454,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710347292955</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="None">
+      <option name="closed" value="true" />
+      <created>1711011342881</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1711011342882</updated>
+    </task>
+    <task id="LOCAL-00164" summary="None">
+      <option name="closed" value="true" />
+      <created>1711011632156</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1711011632157</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="ToolWindowManager">
