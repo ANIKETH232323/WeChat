@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="workspace.xml updated" />
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="workspace.xml and main.dart updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -373,14 +373,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00170" summary="None">
-      <option name="closed" value="true" />
-      <created>1711208006798</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1711208006799</updated>
-    </task>
     <task id="LOCAL-00171" summary="None">
       <option name="closed" value="true" />
       <created>1711288407246</created>
@@ -469,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711523539432</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="workspace.xml and main.dart updated">
+      <option name="closed" value="true" />
+      <created>1711599231430</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1711599231431</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -499,6 +499,7 @@
     <MESSAGE value="None" />
     <MESSAGE value="main.dart updated" />
     <MESSAGE value="workspace.xml updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml updated" />
+    <MESSAGE value="workspace.xml and main.dart updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml and main.dart updated" />
   </component>
 </project>
