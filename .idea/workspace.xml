@@ -375,14 +375,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00178" summary="main.dart updated">
-      <option name="closed" value="true" />
-      <created>1711429810419</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1711429810420</updated>
-    </task>
     <task id="LOCAL-00179" summary="workspace.xml updated">
       <option name="closed" value="true" />
       <created>1711475855577</created>
@@ -471,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711908216218</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1711909323451</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1711909323451</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="ToolWindowManager">
