@@ -17,13 +17,23 @@
 # Screen Shots
 
 ``` Welcome Screen ```  ``` Register Screen ``` ``` Login Screen ``` ``` Chat Screen ```
+<p float="middle">
+  <!--- Home Screen  --->
+<img src="WeChat Screenshots/Home Screen.png" width="140" height="300"/>
+  <!--- Login Screen  --->
+<img src="WeChat Screenshots/Sign In and Sign Up Screen.png" width="140" height="300"/>
+  <!--- Term end Screen  --->
+<img src="WeChat Screenshots/Teram and Condition.png" width="140" height="300"/>
+  <!--- Privicy Policy Screen  --->
+<img src="WeChat Screenshots/Privacy Policy.png" width="140" height="300"/>
+  <!--- Welcome Screen  --->
+<img src="WeChat Screenshots/Page 2.png" width="140" height="300"/>
+  <!--- Slash Screen Screen  --->
+<img src="WeChat Screenshots/Page 1.png" width="140" height="300"/>
+  <!--- Notification  Screen  --->
+<img src="WeChat Screenshots/Notification Permission.png" width="140" height="300"/>
+</p>
 
-<img src="https://github.com/ANIKETH232323/WeChat/assets/102458123/ab2dfa45-a021-4353-a546-d5e483198c1a" width="200" height="450"/>
-
-<img src="https://github.com/ANIKETH232323/WeChat/assets/102458123/c9ee3eaa-3132-4b01-8ef7-867361e67df9" width="200" height="450">
-
-<img src="https://github.com/ANIKETH232323/WeChat/assets/102458123/ae196df0-d27c-4d25-b8cd-ba42e6f45684" width="200" height="450">
-<img src="https://github.com/ANIKETH232323/WeChat/assets/102458123/30adf6ff-c7e1-47fc-bd73-1ac108f75b37" width="200" height="450">
 
 # Demo Video
 https://github.com/ANIKETH232323/WeChat/assets/102458123/f5bd3111-8031-408e-8a7b-355a517f51f0
