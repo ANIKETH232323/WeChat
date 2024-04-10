@@ -134,7 +134,7 @@ class _LoginPage1State  extends State<LoginPage1>{
                             SizedBox(width: 25),
                             Text("Login With Google",
                               style: TextStyle(
-                                  color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),)
+                                  color: Colors.black,fontFamily: 'OnePlus',fontWeight:FontWeight.bold,fontSize: 18),)
                           ]),
                     ),
                   ),

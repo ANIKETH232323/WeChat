@@ -9,7 +9,7 @@ class SnackBar1{
           children: [
             const Icon(Icons.person_2_rounded),
             const SizedBox(width: 15,),
-            Center(child: Text(msg,textAlign: TextAlign.center,)),
+            Center(child: Text(msg,textAlign: TextAlign.center,style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),)),
           ],
         ),
       dismissDirection: DismissDirection.up,

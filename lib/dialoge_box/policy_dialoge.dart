@@ -80,7 +80,7 @@ class Policy_PopUp extends StatelessWidget {
               ),
               child: TextButton(
                   onPressed: () =>Navigator.of(context).pop(),
-                    child: const Text("CLOSE",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                    child: const Text("CLOSE",style: TextStyle(color: Colors.black,fontFamily: 'OnePlus',fontWeight:FontWeight.bold)),
                   ),
             )
           ],

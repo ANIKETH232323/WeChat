@@ -95,7 +95,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Text(
                                 'Joined On 02.02.2024',
                                 style:
-                                    TextStyle(color: textColor, fontSize: 15),
+                                    TextStyle(color: textColor, fontSize: 15,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                               ),
                               SizedBox(
                                 width: 5,
@@ -103,7 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Text(
                                 'at 8.45 PM',
                                 style:
-                                    TextStyle(color: textColor, fontSize: 15),
+                                    TextStyle(color: textColor, fontSize: 15,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                               ),
                             ],
                           ),
@@ -129,8 +129,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         blurRadius: 10)
                                   ]),
                               child: ListTile(
-                                title: const Text("Email"),
-                                subtitle: Text(widget.chatUserModel.email),
+                                title: const Text("Email",style: TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
+                                subtitle: Text(widget.chatUserModel.email,style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
                                 leading: const Icon(Icons.email),
                               ),
                             ),
@@ -153,7 +153,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         blurRadius: 10)
                                   ]),
                               child: ListTile(
-                                title: const Text("About"),
+                                title: const Text("About",style: TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
                                 subtitle: SizedBox(
                                   height: 25,
                                   child: TextFormField(
@@ -204,7 +204,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       borderRadius: BorderRadius.circular(10)),
                                   padding: const EdgeInsets.all(15),
                                 ),
-                                child: const Text('Update Profile')),
+                                child: const Text('Update Profile',style: TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),)),
                           ),
                         ),
                       ),
@@ -286,7 +286,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
-                            fontWeight: FontWeight.w700),
+                            fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                       ),
                     ),
                     const SizedBox(
@@ -378,7 +378,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             padding: const EdgeInsets.only(bottom: 65),
             children: [
               const Padding(padding: EdgeInsets.only(top: 15)),
-              const Text("Pick Profile Picture",textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),),
+              const Text("Pick Profile Picture",textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

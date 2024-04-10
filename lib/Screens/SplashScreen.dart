@@ -57,10 +57,10 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: const Column(
                     children: [
                       Text("WeChat",
-                        style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,letterSpacing: 2,),
+                        style: TextStyle(fontSize: 25,fontFamily: 'OnePlus',fontWeight:FontWeight.bold,letterSpacing: 2,),
                       ),
                       Text("\nMade In India With Flutter",
-                          style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,letterSpacing: 1,)
+                          style: TextStyle(fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold,letterSpacing: 1,)
                       )
                     ],
                   ),

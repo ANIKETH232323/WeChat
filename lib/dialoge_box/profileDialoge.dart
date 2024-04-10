@@ -56,7 +56,7 @@ class _ProfileDialogeState extends State<ProfileDialoge> {
                     ),
                   ),
                   const SizedBox(height: 20,),
-                  Text(widget.chatUserModel.name,style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w700),)
+                  Text(widget.chatUserModel.name,style: const TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),)
                   
                 ],
               ),

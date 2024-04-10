@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="workspace.xml updated">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/OPPOSans-M.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/SysSans-En-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/SysSans-En-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/onep_font_text_45lt.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/oplus_sans_design_2_0_7_no.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/LoginDetails/LoginScreen1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/LoginDetails/LoginScreen1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/MessageSendingFIeld.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/MessageSendingFIeld.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/P2PMessageUI/persont_person_Chat_UI.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/Message/PersonalMessageScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/Message/PersonalMessageScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/SplashScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/SplashScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dialoge_box/policy_dialoge.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialoge_box/policy_dialoge.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dialoge_box/profileDialoge.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialoge_box/profileDialoge.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dialoge_box/snackBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialoge_box/snackBar.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,14 +383,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00192" summary="workspace.xml updated">
-      <option name="closed" value="true" />
-      <created>1712032521141</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1712032521141</updated>
-    </task>
     <task id="LOCAL-00193" summary="workspace.xml updated">
       <option name="closed" value="true" />
       <created>1712032636996</created>
@@ -475,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712766734912</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1712766748753</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1712766748753</updated>
+    </task>
+    <option name="localTasksCounter" value="205" />
     <servers />
   </component>
   <component name="ToolWindowManager">

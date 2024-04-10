@@ -71,7 +71,7 @@ class _P2PUIState extends State<P2PUI> {
                         Container(
                           margin: const EdgeInsets.only(top: 5, left: 5),
                           child: widget.messageModel.type == Type.text
-                              ? Text(widget.messageModel.msg)
+                              ? Text(widget.messageModel.msg,style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),)
                               : Padding(
                                   padding: const EdgeInsets.only(right: 15.0),
                                   child: ClipRRect(
@@ -119,7 +119,7 @@ class _P2PUIState extends State<P2PUI> {
           Padding(
             padding: const EdgeInsets.only(left: 55),
             child: Text(TimeFormat.getFormatedTime(
-                context: context, time: widget.messageModel.sent)),
+                context: context, time: widget.messageModel.sent),style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
           )
         ],
       ),
@@ -151,7 +151,7 @@ class _P2PUIState extends State<P2PUI> {
                             topRight: Radius.circular(28),
                             bottomLeft: Radius.circular(28))),
                     child: widget.messageModel.type == Type.text
-                        ? Text(widget.messageModel.msg)
+                        ? Text(widget.messageModel.msg,style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),)
                         : Padding(
                             padding: const EdgeInsets.only(right: 15.0),
                             child: ClipRRect(
@@ -183,7 +183,7 @@ class _P2PUIState extends State<P2PUI> {
           Padding(
             padding: const EdgeInsets.only(right: 50),
             child: Text(TimeFormat.getFormatedTime(
-                context: context, time: widget.messageModel.sent)),
+                context: context, time: widget.messageModel.sent),style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
           )
         ],
       ),
@@ -299,7 +299,7 @@ class _P2PUIState extends State<P2PUI> {
             color: kPrimaryColor,
             size: 28,
           ),
-          Text(' Update Message')
+          Text(' Update Message',style: TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),)
         ],
       ),
 
@@ -323,7 +323,7 @@ class _P2PUIState extends State<P2PUI> {
             },
             child: const Text(
               'Cancel',
-              style: TextStyle(color: kPrimaryColor, fontSize: 16),
+              style: TextStyle(color: kPrimaryColor, fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
             )),
 
         //update button
@@ -359,7 +359,7 @@ class OptionItem extends StatelessWidget {
           children: [
             icon,
             const SizedBox(width: 20),
-            Flexible(child: Text(iconName,style: const TextStyle(fontSize: 20),))
+            Flexible(child: Text(iconName,style: const TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),))
           ],
         ),
       ) ,

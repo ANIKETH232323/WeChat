@@ -83,7 +83,7 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                         return const Center(
                             child: Text(
                           'Say Hi! 👋',
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                         ));
                       }
                   }

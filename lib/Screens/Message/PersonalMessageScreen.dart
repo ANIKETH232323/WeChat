@@ -71,13 +71,13 @@ class _PersonalMessageScreenState extends State<PersonalMessageScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(list.isNotEmpty ?list[0].name : widget.chatUserModel.name,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                      Text(list.isNotEmpty ?list[0].name : widget.chatUserModel.name,style: const TextStyle(fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
                       Text(list.isNotEmpty ?
                           list[0].isOnline ? 'Online'
                               :
                       TimeFormat.getLastActiveTime(context: context, lastActive: list[0].lastActive)
                           :
-                      TimeFormat.getLastActiveTime(context: context, lastActive:widget.chatUserModel.lastActive),style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400)),
+                      TimeFormat.getLastActiveTime(context: context, lastActive:widget.chatUserModel.lastActive),style: const TextStyle(fontSize: 12,fontFamily: 'OnePlus',fontWeight:FontWeight.bold)),
                     ],),
                 )
               ],
