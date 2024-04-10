@@ -13,14 +13,13 @@ void main() {
   DartPluginRegistrant.ensureInitialized();
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]).then(
-          (value) {
-            _initializeFirebase();
-            runApp(const MyApp());
-          },
-
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then(
+    (value) {
+      _initializeFirebase();
+      runApp(const MyApp());
+    },
   );
-
 }
 
 class MyApp extends StatelessWidget {
@@ -30,20 +29,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      // onGenerateRoute: (Settings) => generateRoutes(Settings),
-      home: const SplashScreen()
-    );
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'OnePlus'),
+        darkTheme: ThemeData.dark(),
+        // onGenerateRoute: (Settings) => generateRoutes(Settings),
+        home: const SplashScreen());
   }
 }
 
-
-
 _initializeFirebase() async {
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   var result = await FlutterNotificationChannel.registerNotificationChannel(
     description: 'Your channel description',
     id: 'your_channel_id',

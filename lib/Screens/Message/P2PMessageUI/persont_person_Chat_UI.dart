@@ -335,7 +335,7 @@ class _P2PUIState extends State<P2PUI> {
             },
             child: const Text(
               'Update',
-              style: TextStyle(color: kPrimaryColor, fontSize: 16),
+              style: TextStyle(color: kPrimaryColor, fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
             ))
       ],
     ));

@@ -84,11 +84,9 @@ flutter:
     - images/
     - animation/
     - termandcond/
-    - fonts/
 
   fonts:
-    - family: Onep2
+    - family: OnePlus
       fonts:
-        - asset: fonts/oplus_sans_design_2_0_7_no.ttf
-          weight: 800
+        - asset: assets/fonts/oplus_sans_design_2_0_7_no.ttf
 
