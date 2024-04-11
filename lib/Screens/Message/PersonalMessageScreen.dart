@@ -59,7 +59,7 @@ class _PersonalMessageScreenState extends State<PersonalMessageScreen> {
                       width: 40,
                       imageUrl: list.isNotEmpty ?list[0].image : widget.chatUserModel.image,
                       placeholder: (context, url) => const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => const Icon(Icons.error),
+                      errorWidget: (context, url, error) => const Icon(Icons.error,),
                     ),
                   ),
                 ),

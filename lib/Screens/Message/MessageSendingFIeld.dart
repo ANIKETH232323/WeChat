@@ -105,20 +105,18 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                       decoration: BoxDecoration(
                           color: kPrimaryColor.withOpacity(0.05),
                           borderRadius: BorderRadius.circular(50)),
-                      child: Row(children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  FocusScope.of(context).unfocus();
-                                  showemoji = !showemoji;
-                                });
-                              },
-                              icon: const Icon(
-                                  Icons.sentiment_satisfied_alt_outlined,
-                                  color: kPrimaryColor)),
-                        ),
+                      child: Row(
+                          children: [
+                        IconButton(
+                            onPressed: () {
+                              setState(() {
+                                FocusScope.of(context).unfocus();
+                                showemoji = !showemoji;
+                              });
+                            },
+                            icon: const Icon(
+                                Icons.sentiment_satisfied_alt_outlined,
+                                color: kPrimaryColor)),
 
                         // Message TextField
                         Expanded(
@@ -134,40 +132,35 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                               hintText: "Type Message",
                               border: InputBorder.none),
                         )),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: IconButton(
-                              onPressed: () async {
-                                final ImagePicker picker = ImagePicker();
-                                // Pick multiple  image. that's why using list
-                                final List<XFile> images =
-                                    await picker.pickMultiImage();
+                        IconButton(
+                            onPressed: () async {
+                              final ImagePicker picker = ImagePicker();
+                              // Pick multiple  image. that's why using list
+                              final List<XFile> images =
+                                  await picker.pickMultiImage();
 
-                                for (var i in images) {
-                                  Api.sendImage(
-                                      widget.chatUserModel, File(i.path));
-                                }
-                              },
-                              icon: const Icon(Icons.photo,
-                                  color: kPrimaryColor)),
+                              for (var i in images) {
+                                Api.sendImage(
+                                    widget.chatUserModel, File(i.path));
+                              }
+                            },
+                            icon: const Icon(Icons.photo,
+                                color: kPrimaryColor)
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: IconButton(
-                              onPressed: () async {
-                                final ImagePicker picker = ImagePicker();
-                                // Pick an image.
-                                final XFile? image = await picker.pickImage(
-                                    source: ImageSource.camera);
+                        IconButton(
+                            onPressed: () async {
+                              final ImagePicker picker = ImagePicker();
+                              // Pick an image.
+                              final XFile? image = await picker.pickImage(
+                                  source: ImageSource.camera);
 
-                                if (image != null) {
-                                  Api.sendImage(
-                                      widget.chatUserModel, File(image.path));
-                                }
-                              },
-                              icon: const Icon(Icons.camera_alt,
-                                  color: kPrimaryColor)),
-                        ),
+                              if (image != null) {
+                                Api.sendImage(
+                                    widget.chatUserModel, File(image.path));
+                              }
+                            },
+                            icon: const Icon(Icons.camera_alt,
+                                color: kPrimaryColor)),
                       ]),
                     ),
                   ),

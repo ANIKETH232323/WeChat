@@ -41,70 +41,57 @@ class _HomeListDesignState extends State<HomeListDesign> {
           }
 
           return ListTile(
-              leading: InkWell(
-                onTap: () {
-                  showDialog(
-                      context: context,
-                      builder: (context) => ProfileDialoge(
+
+                  leading: InkWell(
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => ProfileDialoge(
                             chatUserModel: widget.userModel,
                           ));
-                },
-                child: Stack(
-                  children: [
-                    ClipRRect(
+                    },
+                    child: ClipRRect(
                       borderRadius: BorderRadius.circular(25),
                       child: CachedNetworkImage(
                         height: 40,
                         width: 40,
                         imageUrl: widget.userModel.image,
                         placeholder: (context, url) =>
-                            const CircularProgressIndicator(),
+                        const CircularProgressIndicator(),
                         errorWidget: (context, url, error) =>
-                            const Icon(Icons.error),
+                        const Icon(Icons.error_outline_rounded),
                       ),
                     ),
-                    Positioned(
-                      right: 2,
-                      bottom: 2,
-                      child: Container(
-                        height: 10,
-                        width: 10,
-                        decoration: const BoxDecoration(
-                            shape: BoxShape.circle, color: kPrimaryColor),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              title: Text(
-                widget.userModel.name,
-                style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
-              ),
-              subtitle: Opacity(
-                  opacity: 0.64,
-                  child: Text(
-                    messageModel != null
-                        ? messageModel!.type == Type.image
+                  ),
+                  title: Text(
+                    widget.userModel.name,
+                    style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
+                  ),
+                  subtitle: Opacity(
+                      opacity: 0.85,
+                      child: Text(
+                        messageModel != null
+                            ? messageModel!.type == Type.image
                             ? 'Photo'
                             : messageModel!.msg
-                        : widget.userModel.about,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
-                  )),
-              trailing: messageModel == null
-                  ? null
-                  : messageModel!.read.isEmpty &&
-                          messageModel!.fromid != Api.user1.uid
+                            : widget.userModel.about,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
+                      )),
+                  trailing: messageModel == null
+                      ? null
+                      : messageModel!.read.isEmpty &&
+                      messageModel!.fromid != Api.user1.uid
                       ? Container(
-                          height: 15,
-                          width: 15,
-                          decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(25)),
-                        )
+                    height: 15,
+                    width: 15,
+                    decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(25)),
+                  )
                       : Text(TimeFormat.getLastMessFormTime(
-                          context: context, time: messageModel!.sent),style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),));
+                      context: context, time: messageModel!.sent),style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),));
         },
       ),
     );

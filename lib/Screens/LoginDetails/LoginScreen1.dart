@@ -128,11 +128,11 @@ class _LoginPage1State  extends State<LoginPage1>{
                         mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(
-                                height: 35,
-                                width: 35,
+                                height: 27,
+                                width: 26,
                                 child: Image(image: AssetImage("images/google.png"))),
-                            SizedBox(width: 25),
-                            Text("Login With Google",
+                            SizedBox(width: 23),
+                            Text("Continue With Google",
                               style: TextStyle(
                                   color: Colors.black,fontFamily: 'OnePlus',fontWeight:FontWeight.bold,fontSize: 18),)
                           ]),

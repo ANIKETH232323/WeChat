@@ -91,24 +91,24 @@ class _P2PUIState extends State<P2PUI> {
                         ),
 
                         // if(widget.messageModel.read.isNotEmpty)
-                        hello
-                            ? Container(
-                                margin: imag
-                                    ? const EdgeInsets.only(top: 155, left: 235)
-                                    : const EdgeInsets.only(top: 25, left: 85),
-                                child: const Icon(
-                                  Icons.done_all_rounded,
-                                  size: 15,
-                                ),
-                              )
-                            : Container(
-                                margin: imag
-                                    ? const EdgeInsets.only(top: 150, left: 230)
-                                    : const EdgeInsets.only(top: 16, left: 75),
-                                child: const Icon(
-                                  Icons.done,
-                                  size: 15,
-                                )),
+                        // hello
+                        //     ? Container(
+                        //         margin: imag
+                        //             ? const EdgeInsets.only(top: 155, left: 235)
+                        //             : const EdgeInsets.only(top: 25, left: 85),
+                        //         child: const Icon(
+                        //           Icons.done_all_rounded,
+                        //           size: 15,
+                        //         ),
+                        //       )
+                        //     : Container(
+                        //         margin: imag
+                        //             ? const EdgeInsets.only(top: 150, left: 230)
+                        //             : const EdgeInsets.only(top: 16, left: 75),
+                        //         child: const Icon(
+                        //           Icons.done,
+                        //           size: 15,
+                        //         )),
                       ],
                     ),
                   ),
