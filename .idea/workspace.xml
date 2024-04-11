@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="fonts updated" />
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="workspace.xml updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -373,14 +375,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00195" summary="workspace.xml updated">
-      <option name="closed" value="true" />
-      <created>1712515976851</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1712515976851</updated>
-    </task>
     <task id="LOCAL-00196" summary="workspace.xml updated">
       <option name="closed" value="true" />
       <created>1712649272469</created>
@@ -469,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712815717911</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1712815769401</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1712815769401</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -500,8 +502,8 @@
     <MESSAGE value="main.dart updated" />
     <MESSAGE value="workspace.xml and main.dart updated" />
     <MESSAGE value="workspace.xml and Flutter_Plugins.xml updated" />
-    <MESSAGE value="workspace.xml updated" />
     <MESSAGE value="fonts updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="fonts updated" />
+    <MESSAGE value="workspace.xml updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml updated" />
   </component>
 </project>
