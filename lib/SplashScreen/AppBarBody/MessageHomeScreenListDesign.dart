@@ -78,7 +78,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
               ),
               title: Text(
                 widget.userModel.name,
-                style: const TextStyle(fontWeight: FontWeight.w500),
+                style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
               ),
               subtitle: Opacity(
                   opacity: 0.64,
@@ -90,6 +90,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
                         : widget.userModel.about,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                   )),
               trailing: messageModel == null
                   ? null
@@ -103,7 +104,7 @@ class _HomeListDesignState extends State<HomeListDesign> {
                               borderRadius: BorderRadius.circular(25)),
                         )
                       : Text(TimeFormat.getLastMessFormTime(
-                          context: context, time: messageModel!.sent)));
+                          context: context, time: messageModel!.sent),style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),));
         },
       ),
     );

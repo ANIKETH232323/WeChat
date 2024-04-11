@@ -68,7 +68,7 @@ class _ChatReceiverProfileScreenState extends State<ChatReceiverProfileScreen> {
                             child: Text(
                               widget.chatUserModel.name,
                               style: const TextStyle(
-                                  fontWeight: FontWeight.w700, fontSize: 20),
+                                  fontFamily: 'OnePlus',fontWeight:FontWeight.bold, fontSize: 20),
                               textAlign: TextAlign.center,
                             )),
 
@@ -83,7 +83,7 @@ class _ChatReceiverProfileScreenState extends State<ChatReceiverProfileScreen> {
                           children: <Widget>[
                             const Text(
                               'Joined On',
-                              style: TextStyle(color: textColor, fontSize: 15),
+                              style: TextStyle(color: textColor, fontSize: 15,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                             ),
                             const SizedBox(
                               width: 5,
@@ -94,7 +94,7 @@ class _ChatReceiverProfileScreenState extends State<ChatReceiverProfileScreen> {
                                   time: widget.chatUserModel.createdAt,
                                   showYear: true),
                               style: const TextStyle(
-                                  color: textColor, fontSize: 15),
+                                  color: textColor, fontSize: 15,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                             ),
                           ],
                         ),
@@ -121,7 +121,7 @@ class _ChatReceiverProfileScreenState extends State<ChatReceiverProfileScreen> {
                                 ]),
                             child: ListTile(
                               title: const Text("Email"),
-                              subtitle: Text(widget.chatUserModel.email),
+                              subtitle: Text(widget.chatUserModel.email,style: const TextStyle(fontFamily: 'OnePlus',fontWeight:FontWeight.bold),),
                               leading: const Icon(Icons.email),
                             ),
                           ),
@@ -150,7 +150,7 @@ class _ChatReceiverProfileScreenState extends State<ChatReceiverProfileScreen> {
                                   child: Text(
                                     widget.chatUserModel.about,
                                     style: const TextStyle(
-                                      fontWeight: FontWeight.w700,
+                                      fontFamily: 'OnePlus',fontWeight:FontWeight.bold,
                                     ),
                                   )),
                               leading: const Icon(

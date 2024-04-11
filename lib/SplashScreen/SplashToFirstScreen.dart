@@ -93,7 +93,9 @@ class _SplashScreenToFirstState extends State<SplashScreenToFirst> with TickerPr
               style:Theme.of(context).
               textTheme.
               headlineMedium?.
-              copyWith(fontWeight: FontWeight.w900,
+              copyWith(
+                  fontFamily: 'OnePlus',
+                  fontWeight:FontWeight.bold,
                 fontSize: 35
               ),
               ),
@@ -101,6 +103,8 @@ class _SplashScreenToFirstState extends State<SplashScreenToFirst> with TickerPr
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 17,
+                  fontFamily: 'OnePlus',
+                  fontWeight:FontWeight.bold,
                   color: Theme.of(context).
                   textTheme.
                   bodySmall?.color?.withOpacity(.7)),

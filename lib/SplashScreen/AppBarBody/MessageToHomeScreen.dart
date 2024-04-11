@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
               : const Text("WeChat",
                   style: TextStyle(
                       fontSize: 28,
-                      fontWeight: FontWeight.w700,
+                      fontFamily: 'OnePlus',fontWeight:FontWeight.bold,
                       color: Colors.white)),
           bottom: PreferredSize(
               preferredSize: _isSearching
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text("Messages",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'OnePlus',fontWeight:FontWeight.bold,
                                         fontSize: 30)),
                               ],
                             ))
@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 //     reverse: true),
                                 Text(
                                   'No Connection Found',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                                 ),
                               ],
                             ),
@@ -235,7 +235,7 @@ class _HomeScreenState extends State<HomeScreen> {
               title: const Text(
                 'Add User',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
               ),
               insetPadding: EdgeInsets.zero,
               //content
@@ -265,7 +265,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: const Text(
                       'Cancel',
-                      style: TextStyle(color: text1Color, fontSize: 16),
+                      style: TextStyle(color: text1Color, fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                     )),
 
                 //update button
@@ -289,7 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: const Text(
                       'Add',
-                      style: TextStyle(color: text1Color, fontSize: 16),
+                      style: TextStyle(color: text1Color, fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
                     ))
               ],
             ));
