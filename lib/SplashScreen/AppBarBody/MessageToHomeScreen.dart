@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 20, fontWeight: FontWeight.w700),
                     autofocus: true,
                     decoration: const InputDecoration(
-                      hintText: "Search Name",
+                      hintText: "Search Name or Gmail",
                       border: InputBorder.none,
                       alignLabelWithHint: true,
                     ),
@@ -85,7 +85,8 @@ class _HomeScreenState extends State<HomeScreen> {
               : const Text("WeChat",
                   style: TextStyle(
                       fontSize: 28,
-                      fontFamily: 'OnePlus',fontWeight:FontWeight.bold,
+                      fontFamily: 'OnePlus',
+                      fontWeight: FontWeight.bold,
                       color: Colors.white)),
           bottom: PreferredSize(
               preferredSize: _isSearching
@@ -104,7 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text("Messages",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: 'OnePlus',fontWeight:FontWeight.bold,
+                                        fontFamily: 'OnePlus',
+                                        fontWeight: FontWeight.bold,
                                         fontSize: 30)),
                               ],
                             ))
@@ -182,11 +184,38 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ?.map((e) => ChatUserModel.fromJson(e.data()))
                                 .toList() ??
                             [];
-                        if (list.isNotEmpty) {
+                        if (_searchList.isEmpty != list.isEmpty) {
+
+                          return Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Container(
+                                    child: Lottie.asset(
+                                      'animation/page_empty_dark.json',
+                                      animate: true,
+                                      reverse: true,
+                                      repeat: false,
+                                    ),
+                                  ),
+                                ),
+                                const Text(
+                                  'No Connection Found',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontFamily: 'OnePlus',
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          );
+                        }
+                        else {
                           return ListView.builder(
-                            physics: const BouncingScrollPhysics(),
                             itemCount:
-                                _isSearching ? _searchList.length : list.length,
+                            _isSearching ? _searchList.length : list.length,
                             itemBuilder: (context, index) {
                               return HomeListDesign(
                                 userModel: _isSearching
@@ -194,23 +223,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     : list[index],
                               );
                             },
-                          );
-                        } else {
-                          return const Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                // Lottie.asset('animation/page_empty_dark.json',
-                                //     fit: BoxFit.cover,
-                                //     repeat: false,
-                                //     reverse: true),
-                                Text(
-                                  'No Connection Found',
-                                  style: TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
-                                ),
-                              ],
-                            ),
                           );
                         }
                     }
@@ -235,7 +247,10 @@ class _HomeScreenState extends State<HomeScreen> {
               title: const Text(
                 'Add User',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'OnePlus',
+                    fontWeight: FontWeight.bold),
               ),
               insetPadding: EdgeInsets.zero,
               //content
@@ -265,7 +280,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: const Text(
                       'Cancel',
-                      style: TextStyle(color: text1Color, fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
+                      style: TextStyle(
+                          color: text1Color,
+                          fontSize: 16,
+                          fontFamily: 'OnePlus',
+                          fontWeight: FontWeight.bold),
                     )),
 
                 //update button
@@ -289,7 +308,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: const Text(
                       'Add',
-                      style: TextStyle(color: text1Color, fontSize: 16,fontFamily: 'OnePlus',fontWeight:FontWeight.bold),
+                      style: TextStyle(
+                          color: text1Color,
+                          fontSize: 16,
+                          fontFamily: 'OnePlus',
+                          fontWeight: FontWeight.bold),
                     ))
               ],
             ));
