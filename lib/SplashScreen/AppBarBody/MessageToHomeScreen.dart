@@ -184,8 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ?.map((e) => ChatUserModel.fromJson(e.data()))
                                 .toList() ??
                             [];
-                        if (_searchList.isEmpty != list.isEmpty) {
-
+                        if (list.isEmpty) {
                           return Center(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -211,11 +210,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ),
                           );
-                        }
-                        else {
+                        } else {
                           return ListView.builder(
                             itemCount:
-                            _isSearching ? _searchList.length : list.length,
+                                _isSearching ? _searchList.length : list.length,
                             itemBuilder: (context, index) {
                               return HomeListDesign(
                                 userModel: _isSearching
