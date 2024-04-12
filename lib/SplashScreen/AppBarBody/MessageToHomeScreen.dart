@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
@@ -21,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<ChatUserModel> list = [];
   final List<ChatUserModel> _searchList = [];
   bool _isSearching = false;
+  String iserror = '';
 
   @override
   void initState() {
@@ -252,20 +254,27 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               insetPadding: EdgeInsets.zero,
               //content
-              content: Builder(
-                builder: (context) {
-                  return SizedBox(
-                    width: 320,
-                    child: TextField(
-                      maxLines: null,
-                      canRequestFocus: true,
-                      onChanged: (value) => email = value,
-                      decoration: const InputDecoration(
-                        hintText: 'Email-Id',
-                      ),
-                    ),
-                  );
-                },
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Builder(
+                    builder: (context) {
+                      return SizedBox(
+                        width: 320,
+                        child: TextField(
+                          maxLines: null,
+                          canRequestFocus: true,
+                          onChanged: (value) => email = value,
+                          decoration:   InputDecoration(
+                            hintText: 'Email-Id',
+                            errorText: iserror,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+
+                ],
               ),
 
               //actions
@@ -289,19 +298,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 MaterialButton(
                     onPressed: () async {
                       //hide alert dialog
-                      Navigator.pop(context);
+
                       if (email.isNotEmpty) {
                         await Api.addChatUser(email).then(
                           (value) {
                             if (!value) {
                               SnackBar1.showFloatingSnackBar(
                                   context, "No User Found");
+                              Navigator.pop(context);
                             } else {
                               SnackBar1.showFloatingSnackBar(
                                   context, "User Added In Your List");
+                              Navigator.pop(context);
                             }
                           },
                         );
+                      }
+                      else{
+                        iserror = "Invalid Input";
                       }
                     },
                     child: const Text(

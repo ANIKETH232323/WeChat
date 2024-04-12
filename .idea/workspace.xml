@@ -377,14 +377,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00201" summary="workspace.xml updated">
-      <option name="closed" value="true" />
-      <created>1712764313641</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1712764313641</updated>
-    </task>
     <task id="LOCAL-00202" summary="workspace.xml updated">
       <option name="closed" value="true" />
       <created>1712764693506</created>
@@ -473,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712943788149</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1712945307212</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1712945307212</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="ToolWindowManager">
