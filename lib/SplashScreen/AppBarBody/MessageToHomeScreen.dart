@@ -265,7 +265,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           maxLines: null,
                           canRequestFocus: true,
                           onChanged: (value) => email = value,
-                          decoration:   InputDecoration(
+                          decoration: InputDecoration(
                             hintText: 'Email-Id',
                             errorText: iserror,
                           ),
@@ -273,7 +273,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     },
                   ),
-
                 ],
               ),
 
@@ -313,8 +312,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             }
                           },
                         );
-                      }
-                      else{
+                      } else {
                         iserror = "Invalid Input";
                       }
                     },
