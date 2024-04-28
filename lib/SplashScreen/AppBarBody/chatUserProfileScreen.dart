@@ -1,14 +1,8 @@
-import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/chatUserModel.dart';
-import 'package:wechat/Screens/LoginDetails/LoginScreen1.dart';
-import 'package:wechat/dialoge_box/snackBar.dart';
 import 'package:wechat/timeFormater.dart';
 
 import '../../Themes/constants.dart';
@@ -64,7 +58,7 @@ class _ChatReceiverProfileScreenState extends State<ChatReceiverProfileScreen> {
                         // Log in User Name and Text Form Field
                         SizedBox(
                             width: 250,
-                            // Text Form FIeld
+                            // Text Form Field
                             child: Text(
                               widget.chatUserModel.name,
                               style: const TextStyle(
@@ -204,7 +198,7 @@ class _ChatReceiverProfileScreenState extends State<ChatReceiverProfileScreen> {
                   ),
                   Stack(
                     children: [
-                      // Firebase Defult Profile Picture
+                      // Firebase Default Profile Picture
                       SizedBox(
                         height: 145,
                         width: 145,
