@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="Api.dart updated" />
+    <list default="true" id="a6ec7d7c-5e7d-45b9-875b-662002117cee" name="Changes" comment="workspace.xml updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SplashScreen/AppBarBody/MessageToHomeScreen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,30 +59,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;AnalyzeApkAction.lastApkPath&quot;: &quot;E:/Flutter Android Project&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;ScreenshotViewer.SavePath&quot;: &quot;D:/WECHAT SCREEN&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.android.tools.idea.streaming.zoom.toolbar.visible&quot;: &quot;false&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WECHAT SCREEN&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "AnalyzeApkAction.lastApkPath": "E:/Flutter Android Project",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "ScreenshotViewer.SavePath": "D:/WECHAT SCREEN",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.android.tools.idea.streaming.zoom.toolbar.visible": "false",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "D:/WECHAT SCREEN",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Flutter Android Project\WeChat\lib\Screens\LoginDetails" />
@@ -377,38 +379,6 @@
       <option name="project" value="LOCAL" />
       <updated>1700983161176</updated>
     </task>
-    <task id="LOCAL-00212" summary="workspace.xml updated">
-      <option name="closed" value="true" />
-      <created>1712943788148</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1712943788149</updated>
-    </task>
-    <task id="LOCAL-00213" summary="workspace.xml updated">
-      <option name="closed" value="true" />
-      <created>1712945307212</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1712945307212</updated>
-    </task>
-    <task id="LOCAL-00214" summary="workspace.xml updated">
-      <option name="closed" value="true" />
-      <created>1712949931576</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1712949931576</updated>
-    </task>
-    <task id="LOCAL-00215" summary="workspace.xml updated">
-      <option name="closed" value="true" />
-      <created>1713023907850</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1713023907850</updated>
-    </task>
     <task id="LOCAL-00216" summary="workspace.xml updated">
       <option name="closed" value="true" />
       <created>1713445788302</created>
@@ -473,7 +443,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713949026761</updated>
     </task>
-    <option name="localTasksCounter" value="224" />
+    <task id="LOCAL-00224" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1714278553680</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1714278553680</updated>
+    </task>
+    <task id="LOCAL-00225" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1714278610140</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1714278610140</updated>
+    </task>
+    <task id="LOCAL-00226" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1714278663782</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1714278663782</updated>
+    </task>
+    <task id="LOCAL-00227" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1714278743785</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1714278743786</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -506,8 +508,8 @@
     <MESSAGE value="workspace.xml and Flutter_Plugins.xml updated" />
     <MESSAGE value="fonts updated" />
     <MESSAGE value="code updated" />
-    <MESSAGE value="workspace.xml updated" />
     <MESSAGE value="Api.dart updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api.dart updated" />
+    <MESSAGE value="workspace.xml updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml updated" />
   </component>
 </project>
