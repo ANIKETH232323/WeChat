@@ -4,7 +4,6 @@ import 'package:wechat/Api/Api.dart';
 import 'package:wechat/Model/MessageModel.dart';
 import 'package:wechat/Model/chatUserModel.dart';
 import 'package:wechat/Screens/Message/PersonalMessageScreen.dart';
-import 'package:wechat/Themes/constants.dart';
 import 'package:wechat/dialoge_box/profileDialoge.dart';
 import 'package:wechat/timeFormater.dart';
 
