@@ -28,7 +28,6 @@ class LoginAnime extends StatelessWidget {
             child: child,
           ),
         ),
-
     );
   }
 }

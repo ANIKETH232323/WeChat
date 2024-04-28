@@ -315,7 +315,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         ) :
 
-                        // Firebase Defult Profile Picture
+                        // Firebase Default Profile Picture
                         SizedBox(
                           height: 145,
                           width: 145,

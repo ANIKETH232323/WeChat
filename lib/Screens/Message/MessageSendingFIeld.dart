@@ -1,5 +1,5 @@
-import 'dart:io';
 
+import 'dart:io';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -124,8 +124,9 @@ class _ButtomBodyTextState extends State<ButtomBodyText> {
                           controller: textEditingController,
                           maxLines: null,
                           onTap: () {
-                            if (showemoji)
+                            if (showemoji) {
                               setState(() => showemoji = !showemoji);
+                            }
                           },
                           keyboardType: TextInputType.multiline,
                           decoration: const InputDecoration(
